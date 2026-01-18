@@ -74,7 +74,7 @@
     "@types/node": "^25.0.9",
     "@typescript-eslint/rule-tester": "^8.53.0",
     "@typescript-eslint/types": "^8.53.0",
-    "alex-c-line": "^1.17.3",
+    "alex-c-line": "^1.19.1",
     "dotenv-cli": "^11.0.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",

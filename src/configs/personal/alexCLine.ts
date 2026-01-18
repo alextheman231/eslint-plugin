@@ -18,7 +18,7 @@ const personalAlexCLine: Linter.Config[] = [
     },
   },
   {
-    files: ["src/commands/index.ts"],
+    files: ["src/commands/index.ts", "src/configs/internal/**"],
     plugins: {
       perfectionist,
     },
