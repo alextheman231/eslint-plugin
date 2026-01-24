@@ -12,6 +12,7 @@ export default defineConfig([
     outputOptions: {
       exports: "named",
     },
+    inlineOnly: false,
   },
   {
     entry: ["src/utility/public/index.ts"],
@@ -24,5 +25,6 @@ export default defineConfig([
     outputOptions: {
       exports: "named",
     },
+    inlineOnly: false,
   },
 ]);

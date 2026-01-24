@@ -32,9 +32,7 @@
     "build": "tsdown",
     "create-feature-docs": "typedoc",
     "create-local-package": "pnpm run build && rm -f alextheman-eslint-plugin-*.tgz && pnpm pack",
-    "create-release-note-major": "git pull origin main && alex-c-line create-release-note major",
-    "create-release-note-minor": "git pull origin main && alex-c-line create-release-note minor",
-    "create-release-note-patch": "git pull origin main && alex-c-line create-release-note patch",
+    "create-release-note": "bash -c 'git pull origin main && alex-c-line create-release-note-2 $@' --",
     "format": "pnpm run format-prettier && pnpm run format-eslint",
     "format-and-build": "tsx src/utility/checkConfigChanges.ts || pnpm run build && pnpm run format",
     "format-eslint": "eslint --fix --suppress-all \"src/**/*.ts\" \"tests/**/*.ts\" \"package.json\" && rm -f eslint-suppressions.json",
@@ -94,7 +92,7 @@
     "husky": "^9.1.7",
     "jsdom": "^27.4.0",
     "prettier": "^3.8.1",
-    "tsdown": "^0.18.4",
+    "tsdown": "^0.20.1",
     "tsx": "^4.21.0",
     "typedoc": "^0.28.16",
     "typedoc-plugin-markdown": "^4.9.0",
@@ -131,9 +129,6 @@
     "onlyBuiltDependencies": [
       "esbuild",
       "unrs-resolver"
-    ],
-    "overrides": {
-      "tsdown": "<0.19.0"
-    }
+    ]
   }
 }
