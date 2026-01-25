@@ -50,13 +50,10 @@
     "lint-tsc": "tsc --noEmit",
     "pre-commit": "alex-c-line pre-commit-2",
     "prepare": "husky",
-    "prepare-live-utility": "pnpm uninstall @alextheman/utility && pnpm install @alextheman/utility",
-    "prepare-local-utility": "dotenv -e .env -- sh -c 'UTILITY_PATH=${LOCAL_UTILITY_PATH:-../utility}; pnpm --dir \"$UTILITY_PATH\" run build && pnpm uninstall @alextheman/utility && pnpm install file:\"$UTILITY_PATH\"'",
     "test": "vitest run",
     "test-watch": "vitest",
     "update-dependencies": "pnpm update --latest && pnpm update",
-    "use-live-utility": "pnpm run prepare-live-utility",
-    "use-local-utility": "pnpm run prepare-local-utility"
+    "use-local-package": "bash -c 'alex-c-line use-local-package $@' --"
   },
   "dependencies": {
     "@alextheman/utility": "^4.10.2",
@@ -72,7 +69,7 @@
     "@types/node": "^25.0.10",
     "@typescript-eslint/rule-tester": "^8.53.1",
     "@typescript-eslint/types": "^8.53.1",
-    "alex-c-line": "^1.20.0",
+    "alex-c-line": "^1.21.1",
     "dotenv-cli": "^11.0.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
