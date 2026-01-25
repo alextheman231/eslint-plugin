@@ -4,3 +4,4 @@ node_modules
 dist
 alextheman-eslint-plugin-*.tgz
 .config-hash
+.alex-c-line.private.config.js
