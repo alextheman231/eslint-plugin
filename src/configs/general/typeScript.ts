@@ -15,13 +15,18 @@ const generalTypeScript: Linter.Config[] = [
     name: "@alextheman/general/typescript",
     rules: {
       "@typescript-eslint/consistent-type-exports": "error",
-      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { fixStyle: "separate-type-imports" },
+      ],
       "@typescript-eslint/explicit-member-accessibility": "error",
       "@typescript-eslint/no-deprecated": "warn",
       "@typescript-eslint/no-redeclare": ["error", { ignoreDeclarationMerge: true }],
       "@typescript-eslint/no-unused-vars": ["error", unusedVarsIgnorePatterns],
       // Disable import/no-unresolved (enabled in general/javascript, being extended here) because the TypeScript compiler already catches unused imports for us.
       "import/no-unresolved": "off",
+      // Override no-duplicate-imports from the general/javascript config, erroring for value import duplication but allowing separate type/value imports.
+      "no-duplicate-imports": ["error", { allowSeparateTypeImports: true }],
       // Disable regular no-redeclare in favour of TypeScript-specific version since that will flag type redeclarations when we do const MyType = {}; export type MyType = ...
       "no-redeclare": "off",
       // Disable no-undef because undefined variables tend to be better caught by the TypeScript compiler.
