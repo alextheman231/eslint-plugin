@@ -15,7 +15,10 @@ const generalTypeScript: Linter.Config[] = [
     name: "@alextheman/general/typescript",
     rules: {
       "@typescript-eslint/consistent-type-exports": "error",
-      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { fixStyle: "separate-type-imports" },
+      ],
       "@typescript-eslint/explicit-member-accessibility": "error",
       "@typescript-eslint/no-deprecated": "warn",
       "@typescript-eslint/no-redeclare": ["error", { ignoreDeclarationMerge: true }],
