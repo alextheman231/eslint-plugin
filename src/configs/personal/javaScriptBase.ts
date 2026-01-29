@@ -8,6 +8,7 @@ import prettierPlugin from "eslint-plugin-prettier";
 import prettierConfig from "src/configs/external/prettierConfig";
 import { sortClasses, sortExports, sortImports } from "src/configs/helpers";
 import javaScriptLanguageOptions from "src/configs/helpers/javaScriptLanguageOptions";
+import sortNamedImports from "src/configs/helpers/sorting/sortNamedImports";
 
 function personalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
   return [
@@ -31,6 +32,7 @@ function personalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
         "perfectionist/sort-classes": ["error", sortClasses],
         "perfectionist/sort-exports": ["error", sortExports],
         "perfectionist/sort-imports": ["error", sortImports],
+        "perfectionist/sort-named-imports": ["error", sortNamedImports],
         "prefer-arrow-callback": ["error", { allowNamedFunctions: false }],
         "prefer-destructuring": "error",
         "prefer-template": "error",
