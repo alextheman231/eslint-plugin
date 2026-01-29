@@ -24,6 +24,7 @@ const generalJavaScript: Linter.Config[] = [
     },
     rules: {
       eqeqeq: "error",
+      "import/no-duplicates": ["error", { "prefer-inline": false }],
       "import/no-unresolved": "error",
       "n/file-extension-in-import": [
         "error",
@@ -43,7 +44,6 @@ const generalJavaScript: Linter.Config[] = [
       "n/prefer-node-protocol": "error",
       "no-cond-assign": "error",
       "no-console": ["error", { allow: ["warn", "error", "info"] }],
-      "no-duplicate-imports": "error",
       "no-eval": "error",
       "no-lonely-if": "error",
       "no-new-wrappers": "error",
