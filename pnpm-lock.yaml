@@ -43,8 +43,8 @@ importers:
         specifier: ^8.54.0
         version: 8.54.0
       alex-c-line:
-        specifier: ^1.21.2
-        version: 1.21.2
+        specifier: ^1.22.1
+        version: 1.22.1
       dotenv-cli:
         specifier: ^11.0.0
         version: 11.0.0
@@ -137,6 +137,10 @@ packages:
 
   '@alextheman/utility@4.11.0':
     resolution: {integrity: sha512-mxvHUDDBiSEHQqcXY81AHvswSuZq4j6jEh1lPA6cyfMaY1eHeW6m7S/SFy8zvRDvpf0kAPa1YqEpmqhsfETGpg==}
+    engines: {node: '>=22.0.0'}
+
+  '@alextheman/utility@4.12.1':
+    resolution: {integrity: sha512-at+bQVvfRl+EfSvyJCCy4WEkRjHe1mhehfmH78UIzoZBtSQT3HsvnRdruvy/oWLix9jdzfooyvWTWLiZCALROw==}
     engines: {node: '>=22.0.0'}
 
   '@altano/repository-tools@2.0.1':
@@ -1060,8 +1064,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  alex-c-line@1.21.2:
-    resolution: {integrity: sha512-mQDosLbZejyaauUL/y1bdeNlkU+M8ayKD8YBh9SfQaNGF7OnVWAFB+JOr15QrW21L2u2+IkKFbX57bwfyUFggg==}
+  alex-c-line@1.22.1:
+    resolution: {integrity: sha512-f2W65z3P1Yd65PPswDkDxyaVxvMUTrZYV2DmJkrnbzTwm1Md+QB6lxcvrA4mHLmN0AqYw41V7WcTBYp9Wxhl7Q==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
@@ -3078,6 +3082,12 @@ snapshots:
       libsodium-wrappers: 0.8.2
       zod: 4.3.6
 
+  '@alextheman/utility@4.12.1':
+    dependencies:
+      dotenv: 17.2.3
+      libsodium-wrappers: 0.8.2
+      zod: 4.3.6
+
   '@altano/repository-tools@2.0.1': {}
 
   '@asamuzakjp/css-color@4.1.1':
@@ -3876,9 +3886,9 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  alex-c-line@1.21.2:
+  alex-c-line@1.22.1:
     dependencies:
-      '@alextheman/utility': 4.11.0
+      '@alextheman/utility': 4.12.1
       commander: 14.0.2
       dotenv: 17.2.3
       dotenv-stringify: 3.0.1
