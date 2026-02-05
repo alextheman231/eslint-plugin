@@ -1,7 +1,6 @@
 name: Create feature docs
 on:
-  push:
-    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -10,7 +9,7 @@ permissions:
 jobs:
   create-feature-docs:
     if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
-    uses: alextheman231/github-actions/.github/workflows/create-feature-docs.yml@eb296c1a513aa2df5b108b2d39c89ba2cb0bb4ca # v8.0.1
+    uses: alextheman231/github-actions/.github/workflows/create-feature-docs.yml@0b40bc9c6c862ba6ae905560361f2fc57b00db9e # v8.3.0
     secrets:
       APP_ID: ${{ secrets.ALEX_UP_BOT_APP_ID }}
       APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY }}
