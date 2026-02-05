@@ -9,6 +9,7 @@ import prettierPlugin from "eslint-plugin-prettier";
 import prettierConfig from "src/configs/external/prettierConfig";
 import { sortClasses, sortExports, sortImports } from "src/configs/helpers";
 import javaScriptLanguageOptions from "src/configs/helpers/javaScriptLanguageOptions";
+import personalRestrictedImports from "src/configs/helpers/restrictedImports/personalRestrictedImports";
 import sortNamedImports from "src/configs/helpers/sorting/sortNamedImports";
 
 function personalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
@@ -31,6 +32,7 @@ function personalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
         "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
         "no-else-return": "error",
         "no-implicit-coercion": ["error", { allow: ["!!"] }],
+        "no-restricted-imports": ["error", personalRestrictedImports],
         "operator-assignment": ["error", "always"],
         "perfectionist/sort-classes": ["error", sortClasses],
         "perfectionist/sort-exports": ["error", sortExports],
