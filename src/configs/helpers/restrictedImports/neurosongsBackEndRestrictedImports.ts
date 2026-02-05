@@ -1,10 +1,10 @@
 import type { NoRestrictedImportsOptions } from "src/utility/public/NoRestrictedImportsOptions";
 
-import generalRestrictedImports from "src/configs/helpers/restrictedImports/generalRestrictedImports";
+import personalRestrictedImports from "src/configs/helpers/restrictedImports/personalRestrictedImports";
 import { combineRestrictedImports } from "src/utility/public";
 
 const neurosongsBackEndRestrictedImports: NoRestrictedImportsOptions = combineRestrictedImports(
-  generalRestrictedImports,
+  personalRestrictedImports,
   {
     paths: [
       {
