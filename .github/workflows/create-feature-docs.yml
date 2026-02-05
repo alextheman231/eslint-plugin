@@ -9,7 +9,7 @@ permissions:
 jobs:
   create-feature-docs:
     if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
-    uses: alextheman231/github-actions/.github/workflows/create-feature-docs.yml@21565f6ebbec63a0ce3bcda15bb77b75f1c5ad1f # v8.3.2
+    uses: alextheman231/github-actions/.github/workflows/create-feature-docs.yml@3db51f2a57ee95cda50310b3856cfdc0ae171cf7 # v8.3.3
     secrets:
       APP_ID: ${{ secrets.ALEX_UP_BOT_APP_ID }}
       APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY }}
