@@ -126,6 +126,9 @@
     "onlyBuiltDependencies": [
       "esbuild",
       "unrs-resolver"
-    ]
+    ],
+    "patchedDependencies": {
+      "@typescript-eslint/eslint-plugin": "patches/@typescript-eslint__eslint-plugin.patch"
+    }
   }
 }

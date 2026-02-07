@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@typescript-eslint/eslint-plugin':
+    hash: e7ce6eda4cc9b9f3feb318d4eb9179aff8828a46b114119737e490aceeb24514
+    path: patches/@typescript-eslint__eslint-plugin.patch
+
 importers:
 
   .:
@@ -3744,7 +3749,7 @@ snapshots:
 
   '@types/unist@3.0.3': {}
 
-  '@typescript-eslint/eslint-plugin@8.54.0(@typescript-eslint/parser@8.54.0(eslint@10.0.0)(typescript@5.9.3))(eslint@10.0.0)(typescript@5.9.3)':
+  '@typescript-eslint/eslint-plugin@8.54.0(patch_hash=e7ce6eda4cc9b9f3feb318d4eb9179aff8828a46b114119737e490aceeb24514)(@typescript-eslint/parser@8.54.0(eslint@10.0.0)(typescript@5.9.3))(eslint@10.0.0)(typescript@5.9.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       '@typescript-eslint/parser': 8.54.0(eslint@10.0.0)(typescript@5.9.3)
@@ -6028,7 +6033,7 @@ snapshots:
 
   typescript-eslint@8.54.0(eslint@10.0.0)(typescript@5.9.3):
     dependencies:
-      '@typescript-eslint/eslint-plugin': 8.54.0(@typescript-eslint/parser@8.54.0(eslint@10.0.0)(typescript@5.9.3))(eslint@10.0.0)(typescript@5.9.3)
+      '@typescript-eslint/eslint-plugin': 8.54.0(patch_hash=e7ce6eda4cc9b9f3feb318d4eb9179aff8828a46b114119737e490aceeb24514)(@typescript-eslint/parser@8.54.0(eslint@10.0.0)(typescript@5.9.3))(eslint@10.0.0)(typescript@5.9.3)
       '@typescript-eslint/parser': 8.54.0(eslint@10.0.0)(typescript@5.9.3)
       '@typescript-eslint/typescript-estree': 8.54.0(typescript@5.9.3)
       '@typescript-eslint/utils': 8.54.0(eslint@10.0.0)(typescript@5.9.3)
