@@ -14,6 +14,9 @@ importers:
       '@eslint/compat':
         specifier: ^2.0.2
         version: 2.0.2(eslint@10.0.0)
+      '@typescript-eslint/types':
+        specifier: ^8.54.0
+        version: 8.54.0
       '@typescript-eslint/utils':
         specifier: ^8.54.0
         version: 8.54.0(eslint@10.0.0)(typescript@5.9.3)
@@ -42,9 +45,6 @@ importers:
       '@typescript-eslint/rule-tester':
         specifier: ^8.54.0
         version: 8.54.0(eslint@10.0.0)(typescript@5.9.3)
-      '@typescript-eslint/types':
-        specifier: ^8.54.0
-        version: 8.54.0
       alex-c-line:
         specifier: ^1.23.1
         version: 1.23.1
