@@ -19,18 +19,18 @@ import {
   generalTypeScript,
 } from "src/configs/general";
 import {
-  personalAlexCLine,
-  personalComponents,
-  personalEslintPlugin,
-  personalJavaScript,
-  personalNeurosongsBackEnd,
-  personalNeurosongsFrontEnd,
-  personalReact,
-  personalTests,
-  personalTypeScript,
-  personalTypeScriptPackage,
-  personalUtility,
-} from "src/configs/personal";
+  internalAlexCLine,
+  internalComponents,
+  internalEslintPlugin,
+  internalJavaScript,
+  internalJsdoc,
+  internalNeurosongsBackEnd,
+  internalNeurosongsFrontEnd,
+  internalReact,
+  internalTests,
+  internalTypeScript,
+  internalUtility,
+} from "src/configs/internal";
 import { pluginBase, pluginTests } from "src/configs/plugin";
 import flattenConfigs from "src/utility/public/flattenConfigs";
 
@@ -53,18 +53,18 @@ function createAlexPluginConfigs(
       react: generalReact,
       typescript: generalTypeScript,
     },
-    personal: {
-      alexCLine: personalAlexCLine,
-      components: personalComponents,
-      eslintPlugin: personalEslintPlugin(plugin),
-      javascript: personalJavaScript(plugin),
-      neurosongsBackEnd: personalNeurosongsBackEnd,
-      neurosongsFrontEnd: personalNeurosongsFrontEnd,
-      react: personalReact,
-      tests: personalTests,
-      typescript: personalTypeScript(plugin),
-      typescriptPackage: personalTypeScriptPackage,
-      utility: personalUtility,
+    internal: {
+      alexCLine: internalAlexCLine(plugin),
+      components: internalComponents,
+      eslintPlugin: internalEslintPlugin(plugin),
+      javascript: internalJavaScript(plugin),
+      jsdoc: internalJsdoc,
+      neurosongsBackEnd: internalNeurosongsBackEnd,
+      neurosongsFrontEnd: internalNeurosongsFrontEnd,
+      react: internalReact,
+      tests: internalTests,
+      typescript: internalTypeScript(plugin),
+      utility: internalUtility(plugin),
     },
     plugin: {
       base: pluginBase(plugin),

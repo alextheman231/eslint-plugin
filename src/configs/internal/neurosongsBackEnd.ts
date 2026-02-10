@@ -4,9 +4,9 @@ import nodePlugin from "eslint-plugin-n";
 
 import neurosongsBackEndRestrictedImports from "src/configs/helpers/restrictedImports/neurosongsBackEndRestrictedImports";
 
-const personalNeurosongsBackEnd: Linter.Config[] = [
+const internalNeurosongsBackEnd: Linter.Config[] = [
   {
-    name: "@alextheman/personal/neurosongs-back-end",
+    name: "@alextheman/internal/neurosongs-back-end",
     plugins: {
       n: nodePlugin,
     },
@@ -33,4 +33,4 @@ const personalNeurosongsBackEnd: Linter.Config[] = [
   },
 ];
 
-export default personalNeurosongsBackEnd;
+export default internalNeurosongsBackEnd;

@@ -4,7 +4,7 @@ import globals from "globals";
 
 import testsRestrictedImports from "src/configs/helpers/restrictedImports/testsRestrictedImports";
 
-const personalTests: Linter.Config[] = [
+const internalTests: Linter.Config[] = [
   {
     files: ["**/*.test.{js,ts}"],
     languageOptions: {
@@ -14,7 +14,7 @@ const personalTests: Linter.Config[] = [
         ...globals.vitest,
       },
     },
-    name: "@alextheman/personal/tests",
+    name: "@alextheman/internal/tests",
     rules: {
       "no-restricted-globals": [
         "error",
@@ -37,4 +37,4 @@ const personalTests: Linter.Config[] = [
   },
 ];
 
-export default personalTests;
+export default internalTests;

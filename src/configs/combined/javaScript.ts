@@ -4,7 +4,7 @@ import type { AlexPlugin } from "src/alexPlugin";
 
 import combinedTests from "src/configs/combined/tests";
 import generalJavaScript from "src/configs/general/javaScript";
-import personalJavaScript from "src/configs/personal/javaScriptBase";
+import internalJavaScript from "src/configs/internal/javaScript";
 import { pluginBase } from "src/configs/plugin";
 
 function combinedJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
@@ -14,7 +14,7 @@ function combinedJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
     },
     ...pluginBase(plugin),
     ...generalJavaScript,
-    ...personalJavaScript(plugin),
+    ...internalJavaScript(plugin),
     ...combinedTests(plugin),
   ];
 }
