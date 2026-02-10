@@ -2,6 +2,7 @@ import type { Linter } from "eslint";
 
 import type { AlexPlugin } from "src/alexPlugin";
 
+import { fixupPluginRules } from "@eslint/compat";
 import tseslint from "typescript-eslint";
 
 import typeScriptLanguageOptions from "src/configs/helpers/typeScriptLanguageOptions";
@@ -14,7 +15,7 @@ function internalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
       name: "@alextheman/internal/typescript",
       plugins: {
         "@alextheman": plugin,
-        "@typescript-eslint": tseslint.plugin,
+        "@typescript-eslint": fixupPluginRules(tseslint.plugin),
       },
       rules: {
         "@alextheman/standardise-error-messages": "error",
