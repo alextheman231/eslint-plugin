@@ -1,5 +1,6 @@
 import type { Linter } from "eslint";
 
+import { fixupConfigRules } from "@eslint/compat";
 import tseslint from "typescript-eslint";
 
 import generalJavaScript from "src/configs/general/javaScript";
@@ -7,7 +8,7 @@ import typeScriptLanguageOptions from "src/configs/helpers/typeScriptLanguageOpt
 import unusedVarsIgnorePatterns from "src/configs/helpers/unusedVarsIgnorePatterns";
 
 const generalTypeScript: Linter.Config[] = [
-  ...tseslint.configs.recommended,
+  ...fixupConfigRules(tseslint.configs.recommended),
   ...generalJavaScript,
   {
     files: ["**/*.ts", "**/*.tsx"],

@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "@alextheman/utility": "^4.13.0",
+    "@eslint/compat": "^2.0.2",
     "@typescript-eslint/utils": "^8.54.0",
     "common-tags": "^1.8.2",
     "zod": "^4.3.6"
@@ -126,9 +127,6 @@
     "onlyBuiltDependencies": [
       "esbuild",
       "unrs-resolver"
-    ],
-    "patchedDependencies": {
-      "@typescript-eslint/eslint-plugin": "patches/@typescript-eslint__eslint-plugin.patch"
-    }
+    ]
   }
 }
