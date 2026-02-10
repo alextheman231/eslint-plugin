@@ -6,12 +6,12 @@ import tseslint from "typescript-eslint";
 
 import typeScriptLanguageOptions from "src/configs/helpers/typeScriptLanguageOptions";
 
-function personalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
   return [
     {
       files: ["**/*.ts", "**/*.tsx"],
       languageOptions: typeScriptLanguageOptions,
-      name: "@alextheman/personal/typescript",
+      name: "@alextheman/internal/typescript",
       plugins: {
         "@alextheman": plugin,
         "@typescript-eslint": tseslint.plugin,
@@ -30,4 +30,4 @@ function personalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
   ];
 }
 
-export default personalTypeScript;
+export default internalTypeScript;

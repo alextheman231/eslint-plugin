@@ -12,12 +12,12 @@ import javaScriptLanguageOptions from "src/configs/helpers/javaScriptLanguageOpt
 import personalRestrictedImports from "src/configs/helpers/restrictedImports/personalRestrictedImports";
 import sortNamedImports from "src/configs/helpers/sorting/sortNamedImports";
 
-function personalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
   return [
     {
       files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
       languageOptions: javaScriptLanguageOptions,
-      name: "@alextheman/personal/javascript",
+      name: "@alextheman/internal/javascript",
       plugins: {
         "@alextheman": plugin,
         import: importPlugin,
@@ -56,4 +56,4 @@ function personalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
   ];
 }
 
-export default personalJavaScript;
+export default internalJavaScript;

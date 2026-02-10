@@ -1,9 +1,9 @@
 import type { Linter } from "eslint";
 
-import personalTypeScriptPackage from "src/configs/personal/typeScriptPackage";
+import internalJsdoc from "src/configs/internal/jsdoc";
 
-const personalComponents: Linter.Config[] = [
-  ...personalTypeScriptPackage,
+const internalComponents: Linter.Config[] = [
+  ...internalJsdoc,
   {
     rules: {
       "jsdoc/check-param-names": "off",
@@ -15,4 +15,4 @@ const personalComponents: Linter.Config[] = [
   },
 ];
 
-export default personalComponents;
+export default internalComponents;

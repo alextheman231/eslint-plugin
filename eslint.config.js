@@ -1,6 +1,6 @@
 import alexPlugin from "./dist/index.js";
 
 export default [
-  ...alexPlugin.configs["combined/typescript-package"],
-  ...alexPlugin.configs["personal/eslint-plugin"],
+  ...alexPlugin.configs["internal/eslint-plugin"],
+  ...alexPlugin.configs["general/package-json"],
 ];

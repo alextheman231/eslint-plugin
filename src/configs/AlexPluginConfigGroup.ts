@@ -4,7 +4,7 @@ import type { GetFlattenedConfigNames } from "src/utility/public/GetFlattenedCon
 
 export type GeneralConfig = "javascript" | "typescript" | "react" | "packageJson";
 export type PluginConfig = "base" | "tests";
-export type PersonalConfig =
+export type InternalConfig =
   | "javascript"
   | "typescript"
   | "react"
@@ -14,7 +14,7 @@ export type PersonalConfig =
   | "neurosongsFrontEnd"
   | "utility"
   | "alexCLine"
-  | "typescriptPackage"
+  | "jsdoc"
   | "components";
 export type CombinedConfig =
   | "javascript"
@@ -28,7 +28,7 @@ export type CombinedConfig =
 export interface AlexPluginConfigObject {
   general: Record<GeneralConfig, Linter.Config[]>;
   plugin: Record<PluginConfig, Linter.Config[]>;
-  personal: Record<PersonalConfig, Linter.Config[]>;
+  internal: Record<InternalConfig, Linter.Config[]>;
   combined: Record<CombinedConfig, Linter.Config[]>;
 }
 

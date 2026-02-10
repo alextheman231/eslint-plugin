@@ -5,14 +5,16 @@ import type { AlexPlugin } from "src/alexPlugin";
 import jsdoc from "eslint-plugin-jsdoc";
 import perfectionist from "eslint-plugin-perfectionist";
 
+import { combinedTypeScriptPackage } from "src/configs/combined";
 import requireJsdocOptions from "src/configs/helpers/requireJsdocOptions";
 import eslintPluginRestrictedImports from "src/configs/helpers/restrictedImports/eslintPluginRestrictedImports";
 import sortObjects from "src/configs/helpers/sorting/sortObjects";
 
-function personalEslintPlugin(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalEslintPlugin(plugin: Readonly<AlexPlugin>): Linter.Config[] {
   return [
+    ...combinedTypeScriptPackage(plugin),
     {
-      name: "@alextheman/personal/eslint-plugin",
+      name: "@alextheman/internal/eslint-plugin",
       plugins: {
         "@alextheman": plugin,
         jsdoc,
@@ -39,4 +41,4 @@ function personalEslintPlugin(plugin: Readonly<AlexPlugin>): Linter.Config[] {
   ];
 }
 
-export default personalEslintPlugin;
+export default internalEslintPlugin;
