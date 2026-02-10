@@ -2,6 +2,7 @@ import type { Linter } from "eslint";
 
 import type { AlexPlugin } from "src/alexPlugin";
 
+import { fixupPluginRules } from "@eslint/compat";
 import jsdoc from "eslint-plugin-jsdoc";
 import tseslint from "typescript-eslint";
 
@@ -14,7 +15,7 @@ function internalUtility(plugin: Readonly<AlexPlugin>): Linter.Config[] {
     {
       name: "@alextheman/internal/utility",
       plugins: {
-        "@typescript-eslint": tseslint.plugin,
+        "@typescript-eslint": fixupPluginRules(tseslint.plugin),
         jsdoc,
       },
       rules: {
