@@ -21,7 +21,9 @@ import {
 import {
   internalAlexCLine,
   internalComponents,
-  internalEslintPlugin,
+  internalEslintPluginBase,
+  internalEslintPluginConfigs,
+  internalEslintPluginRules,
   internalJavaScript,
   internalJsdoc,
   internalNeurosongsBackEnd,
@@ -31,6 +33,7 @@ import {
   internalTypeScript,
   internalUtility,
 } from "src/configs/internal";
+import internalEslintPluginUtility from "src/configs/internal/eslintPlugin/utility";
 import { pluginBase, pluginTests } from "src/configs/plugin";
 import flattenConfigs from "src/utility/public/flattenConfigs";
 
@@ -56,7 +59,10 @@ function createAlexPluginConfigs(
     internal: {
       alexCLine: internalAlexCLine(plugin),
       components: internalComponents,
-      eslintPlugin: internalEslintPlugin(plugin),
+      eslintPluginBase: internalEslintPluginBase(plugin),
+      eslintPluginConfigs: internalEslintPluginConfigs(plugin),
+      eslintPluginRules: internalEslintPluginRules(plugin),
+      eslintPluginUtility: internalEslintPluginUtility(plugin),
       javascript: internalJavaScript(plugin),
       jsdoc: internalJsdoc,
       neurosongsBackEnd: internalNeurosongsBackEnd,
