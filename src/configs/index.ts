@@ -39,13 +39,13 @@ function createAlexPluginConfigs(
 ): Record<AlexFlattenedConfigName, Linter.Config[]> {
   return flattenConfigs({
     combined: {
-      javascript: [...combinedJavaScript(plugin), ...generalPackageJson],
-      javascriptReact: [...combinedJavaScriptReact(plugin), ...generalPackageJson],
-      react: [...combinedReact, ...generalPackageJson],
-      tests: [...combinedTests(plugin), ...generalPackageJson],
-      typescript: [...combinedTypeScript(plugin), ...generalPackageJson],
-      typescriptPackage: [...combinedTypeScriptPackage(plugin), ...generalPackageJson],
-      typescriptReact: [...combinedTypeScriptReact(plugin), ...generalPackageJson],
+      javascript: combinedJavaScript(plugin),
+      javascriptReact: combinedJavaScriptReact(plugin),
+      react: combinedReact,
+      tests: combinedTests(plugin),
+      typescript: combinedTypeScript(plugin),
+      typescriptPackage: combinedTypeScriptPackage(plugin),
+      typescriptReact: combinedTypeScriptReact(plugin),
     },
     general: {
       javascript: generalJavaScript,
