@@ -7,6 +7,6 @@ export { default as internalNeurosongsFrontEnd } from "src/configs/internal/neur
 export { default as internalReact } from "src/configs/internal/react";
 export { default as internalTests } from "src/configs/internal/tests";
 export { default as internalTypeScript } from "src/configs/internal/typeScript";
-export { default as internalUtility } from "src/configs/internal/utility";
 
 export * from "src/configs/internal/eslintPlugin";
+export * from "src/configs/internal/utility";

@@ -31,7 +31,9 @@ import {
   internalReact,
   internalTests,
   internalTypeScript,
-  internalUtility,
+  internalUtilityBase,
+  internalUtilityInternal,
+  internalUtilityRoot,
 } from "src/configs/internal";
 import internalEslintPluginUtility from "src/configs/internal/eslintPlugin/utility";
 import { pluginBase, pluginTests } from "src/configs/plugin";
@@ -70,7 +72,9 @@ function createAlexPluginConfigs(
       react: internalReact,
       tests: internalTests,
       typescript: internalTypeScript(plugin),
-      utility: internalUtility(plugin),
+      utilityBase: internalUtilityBase(plugin),
+      utilityInternal: internalUtilityInternal(plugin),
+      utilityRoot: internalUtilityRoot(plugin),
     },
     plugin: {
       base: pluginBase(plugin),
