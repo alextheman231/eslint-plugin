@@ -15,7 +15,9 @@ export type InternalConfig =
   | "eslintPluginUtility"
   | "neurosongsBackEnd"
   | "neurosongsFrontEnd"
-  | "utility"
+  | "utilityBase"
+  | "utilityRoot"
+  | "utilityInternal"
   | "alexCLine"
   | "jsdoc"
   | "components";
