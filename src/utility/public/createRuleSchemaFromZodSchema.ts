@@ -1,7 +1,7 @@
-import type { JSONSchema4 } from "@typescript-eslint/utils/json-schema";
-
 import { omitProperties } from "@alextheman/utility";
 import z from "zod";
+
+import type { JSONSchema4 } from "@typescript-eslint/utils/json-schema";
 
 /**
  * Converts a Zod schema to a JSON schema for usage in an ESLint rule.

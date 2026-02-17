@@ -1,8 +1,8 @@
 const sortImports = {
   customGroups: [
     {
-      elementNamePattern: ["package.json"],
-      groupName: "package-json",
+      elementNamePattern: [".json"],
+      groupName: "json",
     },
     {
       elementNamePattern: ["^tests/.*"],
@@ -23,7 +23,7 @@ const sortImports = {
     "value-builtin",
     "value-tests",
     "value-internal",
-    "package-json",
+    "json",
   ],
   ignoreCase: true,
   internalPattern: ["^src/.*"],
