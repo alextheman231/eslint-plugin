@@ -17,6 +17,12 @@
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
+    "./internal": {
+      "types": "./dist/internal/index.d.ts",
+      "import": "./dist/internal/index.js",
+      "require": "./dist/internal/index.cjs",
+      "default": "./dist/internal/index.js"
+    },
     "./utility": {
       "types": "./dist/utility/index.d.ts",
       "import": "./dist/utility/index.js",
@@ -24,8 +30,6 @@
       "default": "./dist/utility/index.js"
     }
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
