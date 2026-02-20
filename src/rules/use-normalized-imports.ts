@@ -1,4 +1,4 @@
-import { normalizeImportPath } from "@alextheman/utility";
+import { normalizeImportPath } from "@alextheman/utility/node";
 import z from "zod";
 
 import createRule from "src/rules/helpers/createRule";
