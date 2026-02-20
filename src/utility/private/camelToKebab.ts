@@ -9,7 +9,7 @@ export type CamelToKebab<S extends string> = S extends `${infer Head}${infer Tai
 function camelToKebab(string: string): string {
   if (string[0] === string[0].toUpperCase()) {
     throw new DataError(
-      string,
+      { string },
       "CAMEL_TO_KEBAB_CONVERSION_ERROR",
       "camelCase string must start with a lowercase letter.",
     );
