@@ -17,7 +17,7 @@ function internalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
         "@typescript-eslint": tseslint.plugin,
       },
       rules: {
-        "@alextheman/standardise-error-messages": "error",
+        "@alextheman/standardise-error-messages": "off",
         "@typescript-eslint/array-type": ["error", { default: "array" }],
         "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "as" }],
         "@typescript-eslint/consistent-type-definitions": "error",
