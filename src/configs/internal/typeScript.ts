@@ -25,6 +25,8 @@ function internalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
         "@typescript-eslint/method-signature-style": ["error", "property"],
         // Explicit any can be helpful sometimes, so it's not worth erroring on every single one.
         "@typescript-eslint/no-explicit-any": "off",
+        // This rule conflicts with my const object + CreateEnumType pattern, therefore it may be disabled.
+        "@typescript-eslint/no-redeclare": "off",
       },
     },
   ];
