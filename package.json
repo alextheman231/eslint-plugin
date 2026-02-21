@@ -9,6 +9,7 @@
   "license": "MIT",
   "author": "alextheman",
   "type": "module",
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
