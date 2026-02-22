@@ -54,6 +54,7 @@ describe("Entrypoint for @alextheman/eslint-plugin", () => {
       "Module type %s",
       async (moduleType) => {
         await temporaryDirectoryTask(async (temporaryPath) => {
+          console.info("Setting up local package in temporary directory...");
           const runCommandInTempDirectory = await setupPackageEndToEnd(
             temporaryPath,
             packageManager,
@@ -65,35 +66,35 @@ describe("Entrypoint for @alextheman/eslint-plugin", () => {
               },
             },
           );
+
+          await writeFile(
+            path.join(temporaryPath, "eslint.config.js"),
+            getEslintConfig(moduleType),
+          );
+
+          console.info("Adding the relevant package scripts...");
+          const tempPackageInfo = await getPackageJsonContents(temporaryPath);
+          if (tempPackageInfo === null) {
+            throw packageJsonNotFoundError(getPackageJsonPath(temporaryPath));
+          }
           const codeFilePath = path.join(
             temporaryPath,
             "src",
             `standards.${moduleType === ModuleType.TYPESCRIPT ? "ts" : "js"}`,
           );
           const codeFileRelativePath = path.relative(temporaryPath, codeFilePath);
-          await mkdir(path.dirname(codeFilePath), { recursive: true });
-          await writeFile(
-            path.join(temporaryPath, "eslint.config.js"),
-            getEslintConfig(moduleType),
-          );
-
-          const tempPackageInfo = await getPackageJsonContents(temporaryPath);
-          if (tempPackageInfo === null) {
-            throw packageJsonNotFoundError(getPackageJsonPath(temporaryPath));
-          }
-
           tempPackageInfo.scripts = {
             ...(tempPackageInfo.scripts ?? {}),
             format: `eslint --fix ${codeFileRelativePath}`,
             lint: `eslint ${codeFileRelativePath}`,
           };
-
           await writeFile(
             getPackageJsonPath(temporaryPath),
             JSON.stringify(tempPackageInfo, null, 2),
           );
 
           if (moduleType === ModuleType.TYPESCRIPT) {
+            console.info("Adding the tsconfig.json file...");
             await writeFile(
               path.join(temporaryPath, "tsconfig.json"),
               JSON.stringify(
@@ -107,22 +108,33 @@ describe("Entrypoint for @alextheman/eslint-plugin", () => {
             );
           }
 
+          console.info("Writing a valid file to test...");
+          await mkdir(path.dirname(codeFilePath), { recursive: true });
           await writeFile(codeFilePath, getCodeString(moduleType, "success"));
+
+          console.info("Running the linting checks...");
           const { exitCode: lintSuccessExitCode } =
             await runCommandInTempDirectory`${packageManager} run lint`;
           expect(lintSuccessExitCode).toBe(0);
 
+          console.info("Writing an invalid file to test...");
           await writeFile(codeFilePath, getCodeString(moduleType, "failure"));
+
+          console.info("Running the linting checks...");
           const { exitCode: lintFailureExitCode, stdout: errorMessage } =
             await runCommandInTempDirectory({ reject: false })`${packageManager} run lint`;
           expect(lintFailureExitCode).toBe(1);
           expect(errorMessage).toContain("@alextheman/has-standards");
 
+          console.info("Running the fixer...");
           const { exitCode: formatExitCode } =
             await runCommandInTempDirectory`${packageManager} run format`;
+          console.info("Verifying fixes have been applied...");
           expect(formatExitCode).toBe(0);
           const fileContents = await readFile(codeFilePath, "utf-8");
           expect(fileContents).toBe(getCodeString(moduleType, "success"));
+
+          console.info("Success! No issues found.");
         });
       },
       90000,
