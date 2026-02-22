@@ -1,4 +1,4 @@
-[**@alextheman/eslint-plugin v5.8.2**](../README.md)
+[**@alextheman/eslint-plugin v5.9.0**](../README.md)
 
 ***
 
