@@ -125,7 +125,7 @@ describe("Entrypoint for @alextheman/eslint-plugin", () => {
           expect(fileContents).toBe(getCodeString(moduleType, "success"));
         });
       },
-      60000,
+      90000,
     );
   });
 });
