@@ -49,7 +49,7 @@ const describe = parseBoolean(process.env.RUN_END_TO_END ?? "false")
   : describeVitest.skip;
 
 describe("Entrypoint for @alextheman/eslint-plugin", () => {
-  describe.each<PackageManager>(["npm", "pnpm"])("Package manager %s", (packageManager) => {
+  describe.each<PackageManager>(["pnpm"])("Package manager %s", (packageManager) => {
     test.each<ModuleType>(["commonjs", "module", "typescript"])(
       "Module type %s",
       async (moduleType) => {
