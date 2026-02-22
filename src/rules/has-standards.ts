@@ -13,7 +13,7 @@ export type HasStandardsOptions = z.infer<typeof hasStandardsOptionsSchema>;
 export function parseHasStandardsOptions(input: unknown): HasStandardsOptions {
   return parseZodSchema(hasStandardsOptionsSchema, input);
 }
-const defaultOptions: HasStandardsOptions = { fixable: true };
+const defaultOptions: HasStandardsOptions = { fixable: false };
 
 const targetValue: string = "I have standards, you'd better have some too!";
 
@@ -34,7 +34,7 @@ const hasStandards = createRule({
   },
   defaultOptions: [defaultOptions],
   create(context) {
-    const { fixable = false } = parseHasStandardsOptions(context.options[0] ?? {});
+    const { fixable = false } = parseHasStandardsOptions(context.options[0] ?? defaultOptions);
     return {
       Literal(node) {
         if (node.value !== targetValue) {
@@ -46,7 +46,8 @@ const hasStandards = createRule({
               value: node.value,
             },
             fix: fixOnCondition(fixable, (fixer) => {
-              return fixer.replaceText(node, targetValue);
+              const [quote] = node.raw;
+              return fixer.replaceText(node, `${quote}${targetValue}${quote}`);
             }),
           });
         }
