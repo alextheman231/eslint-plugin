@@ -1,4 +1,4 @@
-**@alextheman/eslint-plugin v5.9.0**
+**@alextheman/eslint-plugin v5.9.1**
 
 ***
 
