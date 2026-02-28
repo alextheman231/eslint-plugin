@@ -23,7 +23,7 @@ function internalAlexCLine(plugin: Readonly<AlexPlugin>): Linter.Config[] {
       },
     },
     {
-      files: ["src/commands/index.ts", "src/configs/internal/**"],
+      files: ["src/cli/**/index.ts", "src/configs/internal/**"],
       plugins: {
         perfectionist,
       },
