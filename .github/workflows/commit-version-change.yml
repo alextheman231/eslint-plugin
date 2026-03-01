@@ -2,18 +2,44 @@ name: Commit a version change
 on:
   push:
     branches: ["main"]
-
-permissions:
-  contents: write
-  pull-requests: write
+  workflow_dispatch:
 
 jobs:
-  commit-version-change:
+  check-major-version:
+    permissions:
+      contents: write
+      pull-requests: write
     if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
-    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@3db51f2a57ee95cda50310b3856cfdc0ae171cf7 # v8.3.3
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@a00c59786bf2f81fe88d9084008fc05452dc45b2 # v9.0.2
     with:
+      version-type: major
       create-feature-docs: true
-      run-build: true
     secrets:
       APP_ID: ${{ secrets.ALEX_UP_BOT_APP_ID }}
-      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY }}
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY}}
+
+  check-minor-version:
+    permissions:
+      contents: write
+      pull-requests: write
+    if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@a00c59786bf2f81fe88d9084008fc05452dc45b2 # v9.0.2
+    with:
+      version-type: minor
+      create-feature-docs: true
+    secrets:
+      APP_ID: ${{ secrets.ALEX_UP_BOT_APP_ID }}
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY}}
+
+  check-patch-version:
+    permissions:
+      contents: write
+      pull-requests: write
+    if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@a00c59786bf2f81fe88d9084008fc05452dc45b2 # v9.0.2
+    with:
+      version-type: patch
+      create-feature-docs: true
+    secrets:
+      APP_ID: ${{ secrets.ALEX_UP_BOT_APP_ID }}
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY}}
