@@ -6,7 +6,7 @@ import combinedJavaScript from "src/configs/combined/javaScript";
 import { generalTypeScript } from "src/configs/general";
 import { internalJavaScript, internalTypeScript } from "src/configs/internal";
 
-function combinedTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function combinedTypeScript(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     { name: "@alextheman/combined/typescript" },
     ...combinedJavaScript(plugin),

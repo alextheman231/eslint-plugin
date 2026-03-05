@@ -5,7 +5,7 @@ import type { AlexPlugin } from "src/alexPlugin";
 import requireJsdocOptions from "src/configs/helpers/requireJsdocOptions";
 import internalEslintPluginBase from "src/configs/internal/eslintPlugin/base";
 
-function internalEslintPluginUtility(plugin: AlexPlugin): Linter.Config[] {
+function internalEslintPluginUtility(plugin: AlexPlugin): Array<Linter.Config> {
   return [
     ...internalEslintPluginBase(plugin),
     {

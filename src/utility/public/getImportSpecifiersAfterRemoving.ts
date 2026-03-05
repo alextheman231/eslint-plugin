@@ -18,7 +18,7 @@ import type { RuleContext } from "@typescript-eslint/utils/ts-eslint";
  */
 function getImportSpecifiersAfterRemoving<RuleOptions>(
   context: Readonly<RuleContext<"message", [RuleOptions]>>,
-  specifiers: TSESTree.ImportClause[],
+  specifiers: Array<TSESTree.ImportClause>,
   importToRemove: string,
 ): string {
   return specifiers

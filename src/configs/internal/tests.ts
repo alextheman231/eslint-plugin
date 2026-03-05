@@ -4,7 +4,7 @@ import globals from "globals";
 
 import testsRestrictedImports from "src/configs/helpers/restrictedImports/testsRestrictedImports";
 
-const internalTests: Linter.Config[] = [
+const internalTests: Array<Linter.Config> = [
   {
     files: ["**/*.test.{js,ts}"],
     languageOptions: {

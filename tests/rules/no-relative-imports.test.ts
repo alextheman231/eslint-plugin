@@ -7,7 +7,7 @@ import createRuleTester from "tests/rule-testers/createRuleTester";
 import rules from "src/rules";
 
 describe("no-relative-imports", () => {
-  const { valid, invalid } = createRuleTester<NoRelativeImportsOptions[]>({
+  const { valid, invalid } = createRuleTester<Array<NoRelativeImportsOptions>>({
     name: "no-relative-imports",
     rule: rules["no-relative-imports"],
   });

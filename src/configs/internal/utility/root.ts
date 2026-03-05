@@ -6,7 +6,7 @@ import personalRestrictedImports from "src/configs/helpers/restrictedImports/per
 import internalUtilityBase from "src/configs/internal/utility/base";
 import { combineRestrictedImports } from "src/utility/public";
 
-function internalUtilityRoot(plugin: AlexPlugin): Linter.Config[] {
+function internalUtilityRoot(plugin: AlexPlugin): Array<Linter.Config> {
   return [
     ...internalUtilityBase(plugin),
     {

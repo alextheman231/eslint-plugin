@@ -8,7 +8,7 @@ import perfectionist from "eslint-plugin-perfectionist";
 import { combinedTypeScript } from "src/configs/combined";
 import sortObjects from "src/configs/helpers/sorting/sortObjects";
 
-function internalAlexCLine(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalAlexCLine(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     ...combinedTypeScript(plugin),
     {

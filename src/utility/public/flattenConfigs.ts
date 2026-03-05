@@ -42,15 +42,15 @@ import createConfigGroup from "src/utility/private/createConfigGroup";
  *      }
  */
 function flattenConfigs<
-  ConfigObject extends { [K in keyof ConfigObject]: Record<string, Linter.Config[]> },
->(config: ConfigObject): Record<GetFlattenedConfigNames<ConfigObject>, Linter.Config[]> {
-  const allConfigs = {} as Record<GetFlattenedConfigNames<ConfigObject>, Linter.Config[]>;
-  for (const configGroupEntries of Object.entries(config) as Parameters<
-    typeof createConfigGroup<ConfigObject>
-  >[]) {
+  ConfigObject extends { [K in keyof ConfigObject]: Record<string, Array<Linter.Config>> },
+>(config: ConfigObject): Record<GetFlattenedConfigNames<ConfigObject>, Array<Linter.Config>> {
+  const allConfigs = {} as Record<GetFlattenedConfigNames<ConfigObject>, Array<Linter.Config>>;
+  for (const configGroupEntries of Object.entries(config) as Array<
+    Parameters<typeof createConfigGroup<ConfigObject>>
+  >) {
     Object.assign(allConfigs, createConfigGroup<ConfigObject>(...configGroupEntries));
   }
-  return allConfigs satisfies Record<GetFlattenedConfigNames<ConfigObject>, Linter.Config[]>;
+  return allConfigs satisfies Record<GetFlattenedConfigNames<ConfigObject>, Array<Linter.Config>>;
 }
 
 export default flattenConfigs;

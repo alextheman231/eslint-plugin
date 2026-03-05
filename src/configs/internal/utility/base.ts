@@ -8,7 +8,7 @@ import tseslint from "typescript-eslint";
 import { combinedTypeScriptPackage } from "src/configs/combined";
 import requireJsdocOptions from "src/configs/helpers/requireJsdocOptions";
 
-function internalUtilityBase(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalUtilityBase(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     ...combinedTypeScriptPackage(plugin),
     {

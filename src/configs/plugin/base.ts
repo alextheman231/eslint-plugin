@@ -2,7 +2,7 @@ import type { Linter } from "eslint";
 
 import type { AlexPlugin } from "src/alexPlugin";
 
-function pluginBase(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function pluginBase(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     {
       name: "@alextheman/plugin/base",

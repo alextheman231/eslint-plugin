@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 
 import typeScriptLanguageOptions from "src/configs/helpers/typeScriptLanguageOptions";
 
-function internalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalTypeScript(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     {
       files: ["**/*.ts", "**/*.tsx"],
@@ -18,7 +18,7 @@ function internalTypeScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
       },
       rules: {
         "@alextheman/standardise-error-messages": "off",
-        "@typescript-eslint/array-type": ["error", { default: "array" }],
+        "@typescript-eslint/array-type": ["error", { default: "generic" }],
         "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "as" }],
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/dot-notation": "error",

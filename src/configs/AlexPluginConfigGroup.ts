@@ -31,13 +31,13 @@ export type CombinedConfig =
   | "typescriptPackage";
 
 export interface AlexPluginConfigObject {
-  general: Record<GeneralConfig, Linter.Config[]>;
-  plugin: Record<PluginConfig, Linter.Config[]>;
-  internal: Record<InternalConfig, Linter.Config[]>;
-  combined: Record<CombinedConfig, Linter.Config[]>;
+  general: Record<GeneralConfig, Array<Linter.Config>>;
+  plugin: Record<PluginConfig, Array<Linter.Config>>;
+  internal: Record<InternalConfig, Array<Linter.Config>>;
+  combined: Record<CombinedConfig, Array<Linter.Config>>;
 }
 
 export type AlexConfigGroupName = keyof AlexPluginConfigObject;
 
 export type AlexFlattenedConfigName = GetFlattenedConfigNames<AlexPluginConfigObject>;
-export type AlexPluginConfigFlattened = Record<AlexFlattenedConfigName, Linter.Config[]>;
+export type AlexPluginConfigFlattened = Record<AlexFlattenedConfigName, Array<Linter.Config>>;

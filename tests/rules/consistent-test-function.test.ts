@@ -8,7 +8,7 @@ import createRuleTester from "tests/rule-testers/createRuleTester";
 import rules from "src/rules";
 
 describe("consistent-test-function", () => {
-  const { valid, invalid } = createRuleTester<ConsistentTestFunctionOptions[]>({
+  const { valid, invalid } = createRuleTester<Array<ConsistentTestFunctionOptions>>({
     name: "consistent-test-function",
     rule: rules["consistent-test-function"],
   });

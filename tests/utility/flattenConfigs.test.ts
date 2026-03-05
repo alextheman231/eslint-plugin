@@ -65,7 +65,7 @@ describe("flattenConfigs", () => {
               "no-restricted-imports": "error",
             },
           },
-        ] satisfies Linter.Config[],
+        ] satisfies Array<Linter.Config>,
       },
     };
 

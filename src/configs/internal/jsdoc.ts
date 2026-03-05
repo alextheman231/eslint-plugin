@@ -4,7 +4,7 @@ import jsdoc from "eslint-plugin-jsdoc";
 
 import requireJsdocOptions from "src/configs/helpers/requireJsdocOptions";
 
-const internalJsdoc: Linter.Config[] = [
+const internalJsdoc: Array<Linter.Config> = [
   jsdoc.configs["flat/recommended-typescript-error"],
   {
     rules: {

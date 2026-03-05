@@ -2,7 +2,7 @@ import type { Linter } from "eslint";
 
 import packageJson from "eslint-plugin-package-json";
 
-const generalPackageJson: Linter.Config[] = [
+const generalPackageJson: Array<Linter.Config> = [
   packageJson.configs.recommended,
   {
     plugins: {

@@ -6,7 +6,7 @@ import generalJavaScript from "src/configs/general/javaScript";
 import typeScriptLanguageOptions from "src/configs/helpers/typeScriptLanguageOptions";
 import unusedVarsIgnorePatterns from "src/configs/helpers/unusedVarsIgnorePatterns";
 
-const generalTypeScript: Linter.Config[] = [
+const generalTypeScript: Array<Linter.Config> = [
   ...tseslint.configs.recommended,
   ...generalJavaScript,
   {

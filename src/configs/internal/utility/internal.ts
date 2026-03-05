@@ -4,7 +4,7 @@ import type { AlexPlugin } from "src/alexPlugin";
 
 import internalUtilityBase from "src/configs/internal/utility/base";
 
-function internalUtilityRoot(plugin: AlexPlugin): Linter.Config[] {
+function internalUtilityRoot(plugin: AlexPlugin): Array<Linter.Config> {
   return [
     ...internalUtilityBase(plugin),
     {

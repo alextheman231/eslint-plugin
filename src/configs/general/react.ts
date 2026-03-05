@@ -7,7 +7,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import reactHooks from "src/configs/helpers/eslint-plugin-react-hooks";
 import reactLanguageOptions from "src/configs/helpers/reactLanguageOptions";
 
-const generalReact: Linter.Config[] = [
+const generalReact: Array<Linter.Config> = [
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat["jsx-runtime"],
   jsxA11y.flatConfigs.recommended,
