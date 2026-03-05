@@ -1,7 +1,9 @@
 import type { TypeDocOptions } from "typedoc";
 import type { PluginOptions } from "typedoc-plugin-markdown";
 
-function typeDocConfig(entryPoints: string[] = ["./src/index.ts"]): TypeDocOptions & PluginOptions {
+function typeDocConfig(
+  entryPoints: Array<string> = ["./src/index.ts"],
+): TypeDocOptions & PluginOptions {
   return {
     disableSources: true,
     entryPoints,

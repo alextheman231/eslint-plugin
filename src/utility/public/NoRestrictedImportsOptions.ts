@@ -5,12 +5,12 @@ interface RestrictedPathImportBase {
 }
 
 interface RestrictedPathImportImportNames extends RestrictedPathImportBase {
-  importNames: string[];
+  importNames: Array<string>;
   allowImportNames?: never;
 }
 
 interface RestrictedPathImportAllowImportNames extends RestrictedPathImportBase {
-  allowImportNames: string[];
+  allowImportNames: Array<string>;
   importNames?: never;
 }
 
@@ -26,7 +26,7 @@ interface RestrictedPatternImportBase {
 }
 
 interface RestrictedPatternImportGroup extends RestrictedPatternImportBase {
-  group: string[];
+  group: Array<string>;
   regex?: never;
 }
 
@@ -36,7 +36,7 @@ interface RestrictedPatternImportRegex extends RestrictedPatternImportBase {
 }
 
 interface RestrictedPatternImportImportNames extends RestrictedPatternImportBase {
-  importNames: string[];
+  importNames: Array<string>;
   allowImportNames?: never;
   importNamePattern?: never;
   allowImportNamePattern?: never;
@@ -44,7 +44,7 @@ interface RestrictedPatternImportImportNames extends RestrictedPatternImportBase
 
 interface RestrictedPatternImportAllowImportNames extends RestrictedPatternImportBase {
   importNames?: never;
-  allowImportNames: string[];
+  allowImportNames: Array<string>;
   importNamePattern?: never;
   allowImportNamePattern?: never;
 }
@@ -71,18 +71,18 @@ export type RestrictedPatternImport =
   | RestrictedPatternImportAllowImportNamePattern;
 
 interface NoRestrictedImportsOptionsPathsOnly {
-  paths: RestrictedPathImport[];
+  paths: Array<RestrictedPathImport>;
   patterns?: never;
 }
 
 interface NoRestrictedImportsOptionsPatternsOnly {
   paths?: never;
-  patterns: RestrictedPatternImport[];
+  patterns: Array<RestrictedPatternImport>;
 }
 
 interface NoRestrictedImportsOptionsPathsAndPatterns {
-  paths: RestrictedPathImport[];
-  patterns: RestrictedPatternImport[];
+  paths: Array<RestrictedPathImport>;
+  patterns: Array<RestrictedPatternImport>;
 }
 
 /**

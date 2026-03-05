@@ -7,7 +7,7 @@ import perfectionist from "eslint-plugin-perfectionist";
 import { sortObjects } from "src/configs/helpers";
 import internalEslintPluginBase from "src/configs/internal/eslintPlugin/base";
 
-function internalEslintPluginConfigs(plugin: AlexPlugin): Linter.Config[] {
+function internalEslintPluginConfigs(plugin: AlexPlugin): Array<Linter.Config> {
   return [
     ...internalEslintPluginBase(plugin),
     {

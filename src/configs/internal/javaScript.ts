@@ -12,7 +12,7 @@ import javaScriptLanguageOptions from "src/configs/helpers/javaScriptLanguageOpt
 import personalRestrictedImports from "src/configs/helpers/restrictedImports/personalRestrictedImports";
 import sortNamedImports from "src/configs/helpers/sorting/sortNamedImports";
 
-function internalJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalJavaScript(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     {
       files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],

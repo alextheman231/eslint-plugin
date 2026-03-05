@@ -41,7 +41,7 @@ import flattenConfigs from "src/utility/public/flattenConfigs";
 
 function createAlexPluginConfigs(
   plugin: Readonly<AlexPlugin>,
-): Record<AlexFlattenedConfigName, Linter.Config[]> {
+): Record<AlexFlattenedConfigName, Array<Linter.Config>> {
   return flattenConfigs({
     combined: {
       javascript: combinedJavaScript(plugin),

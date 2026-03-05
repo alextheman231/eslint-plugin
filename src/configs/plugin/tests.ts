@@ -3,7 +3,7 @@ import type { Linter } from "eslint";
 import type { AlexPlugin } from "src/alexPlugin";
 import type { ConsistentTestFunctionOptions } from "src/rules/consistent-test-function";
 
-function pluginTests(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function pluginTests(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     {
       files: ["**/*.test.ts"],

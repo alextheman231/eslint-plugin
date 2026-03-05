@@ -5,7 +5,7 @@ import type { AlexPlugin } from "src/alexPlugin";
 import combinedTypeScript from "src/configs/combined/typeScript";
 import { internalJsdoc } from "src/configs/internal";
 
-function combinedTypeScriptPackage(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function combinedTypeScriptPackage(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     { name: "@alextheman/combined/typescript-package" },
     ...combinedTypeScript(plugin),

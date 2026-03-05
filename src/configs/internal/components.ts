@@ -2,7 +2,7 @@ import type { Linter } from "eslint";
 
 import internalJsdoc from "src/configs/internal/jsdoc";
 
-const internalComponents: Linter.Config[] = [
+const internalComponents: Array<Linter.Config> = [
   ...internalJsdoc,
   {
     rules: {

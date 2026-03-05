@@ -7,7 +7,7 @@ import createRuleTester from "tests/rule-testers/createRuleTester";
 import rules from "src/rules";
 
 describe("no-namespace-imports", () => {
-  const { valid, invalid } = createRuleTester<NoNamespaceImportsOptions[]>({
+  const { valid, invalid } = createRuleTester<Array<NoNamespaceImportsOptions>>({
     name: "no-namespace-imports",
     rule: rules["no-namespace-imports"],
   });

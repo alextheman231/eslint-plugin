@@ -7,7 +7,7 @@ import jsdoc from "eslint-plugin-jsdoc";
 import { combinedTypeScriptPackage } from "src/configs/combined";
 import eslintPluginRestrictedImports from "src/configs/helpers/restrictedImports/eslintPluginRestrictedImports";
 
-function internalEslintPluginBase(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function internalEslintPluginBase(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     ...combinedTypeScriptPackage(plugin),
     {

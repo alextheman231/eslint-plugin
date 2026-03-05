@@ -7,7 +7,7 @@ import reactHooks from "src/configs/helpers/eslint-plugin-react-hooks";
 import reactLanguageOptions from "src/configs/helpers/reactLanguageOptions";
 import reactRestrictedImports from "src/configs/helpers/restrictedImports/reactRestrictedImports";
 
-const internalReact: Linter.Config[] = [
+const internalReact: Array<Linter.Config> = [
   {
     languageOptions: reactLanguageOptions,
     name: "@alextheman/internal/react",

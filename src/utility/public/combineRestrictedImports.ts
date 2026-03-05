@@ -12,7 +12,7 @@ import { omitProperties } from "@alextheman/utility";
  * @returns A new object combining all paths and patterns from the given groups, suitable as an option to pass to `no-restricted-imports`.
  */
 function combineRestrictedImports(
-  ...groups: NoRestrictedImportsOptions[]
+  ...groups: Array<NoRestrictedImportsOptions>
 ): NoRestrictedImportsOptions {
   const paths: NoRestrictedImportsOptions["paths"] = [];
   const patterns: NoRestrictedImportsOptions["patterns"] = [];

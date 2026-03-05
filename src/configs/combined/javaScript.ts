@@ -7,7 +7,7 @@ import generalJavaScript from "src/configs/general/javaScript";
 import internalJavaScript from "src/configs/internal/javaScript";
 import { pluginBase } from "src/configs/plugin";
 
-function combinedJavaScript(plugin: Readonly<AlexPlugin>): Linter.Config[] {
+function combinedJavaScript(plugin: Readonly<AlexPlugin>): Array<Linter.Config> {
   return [
     {
       name: "@alextheman/combined/javascript",
