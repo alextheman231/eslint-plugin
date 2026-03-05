@@ -52,8 +52,8 @@ importers:
         specifier: ^8.56.1
         version: 8.56.1(eslint@10.0.2)(typescript@5.9.3)
       alex-c-line:
-        specifier: ^1.33.4
-        version: 1.33.4(@types/node@25.3.3)
+        specifier: ^2.0.0
+        version: 2.0.0(@types/node@25.3.3)
       dotenv-cli:
         specifier: ^11.0.0
         version: 11.0.0
@@ -149,6 +149,10 @@ packages:
 
   '@alextheman/utility@5.5.0':
     resolution: {integrity: sha512-5YMpCT98L49Yh1C0QKJ60bE2lleWMqCEpCqHvmYWG1glWY0WVG5B3UHXVc9x9XMO0iS96KAHKvqSj+Cxua0/Xw==}
+    engines: {node: '>=22.3.0'}
+
+  '@alextheman/utility@5.6.1':
+    resolution: {integrity: sha512-reTAMQHAYb401nzPMjys1d1T2zIVaa79GNFjUkd+uk38LgoKPwG9OkuJ/Mchs6IVSTDTcj13AcEP4bHCqLMuvQ==}
     engines: {node: '>=22.3.0'}
 
   '@altano/repository-tools@2.0.1':
@@ -1327,8 +1331,8 @@ packages:
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
-  alex-c-line@1.33.4:
-    resolution: {integrity: sha512-FRVv/HqcPHXbxy2PLgqgdesd1dhM2vF7Gx7zYG3+hmpFGealXuFFAbtgaxE24Hc9teTKqso7VcEMKirS83uPXw==}
+  alex-c-line@2.0.0:
+    resolution: {integrity: sha512-+Noz+iJS+aoUGp1GPJ2gQZ4nyku7ZT8IOB7XngGiPXpQ+qOT6Vsbr2ztHH3wkcI5wbKMBFW3A7Z1pO3SLBKMSw==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
@@ -3436,6 +3440,13 @@ snapshots:
       libsodium-wrappers: 0.8.2
       zod: 4.3.6
 
+  '@alextheman/utility@5.6.1':
+    dependencies:
+      dotenv: 17.3.1
+      execa: 9.6.1
+      libsodium-wrappers: 0.8.2
+      zod: 4.3.6
+
   '@altano/repository-tools@2.0.1': {}
 
   '@asamuzakjp/css-color@5.0.1':
@@ -4430,9 +4441,9 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  alex-c-line@1.33.4(@types/node@25.3.3):
+  alex-c-line@2.0.0(@types/node@25.3.3):
     dependencies:
-      '@alextheman/utility': 5.5.0
+      '@alextheman/utility': 5.6.1
       '@inquirer/prompts': 8.3.0(@types/node@25.3.3)
       boxen: 8.0.1
       canvas: 3.2.1
