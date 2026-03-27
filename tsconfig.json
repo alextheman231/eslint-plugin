@@ -6,10 +6,12 @@
     "types": ["eslint", "node", "vitest"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
     "rootDir": ".",
     "paths": {
-      "src/*": ["src/*"]
+      "src/*": ["./src/*"],
+      "tests/*": ["./tests/*"],
+      "package.json": ["./package.json"],
+      "tsconfig.json": ["./tsconfig.json"]
     },
     "esModuleInterop": true,
 
@@ -24,6 +26,6 @@
     "noFallthroughCasesInSwitch": true,
     "declaration": true
   },
-  "include": ["src", "tests", "create-rule.ts"],
+  "include": ["src", "tests"],
   "exclude": ["tests/fixtures"]
 }

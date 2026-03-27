@@ -104,7 +104,7 @@
     "typedoc": "^0.28.18",
     "typedoc-plugin-markdown": "^4.11.0",
     "typedoc-rhineai-theme": "^1.2.0",
-    "typescript": "^6.0.2",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.57.2",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.2"
@@ -134,7 +134,8 @@
   "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
   "pnpm": {
     "overrides": {
-      "tsdown": "<0.21.0"
+      "tsdown": "<0.21.0",
+      "typescript": "<6.0.0"
     },
     "onlyBuiltDependencies": [
       "canvas",
