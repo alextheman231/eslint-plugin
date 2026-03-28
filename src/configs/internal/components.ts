@@ -9,6 +9,7 @@ const internalComponents: Array<Linter.Config> = [
       "jsdoc/check-param-names": "off",
       "jsdoc/require-param": "off",
       "jsdoc/require-returns": "off",
+      "jsdoc/require-tags": "off",
     },
   },
 ];
