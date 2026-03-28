@@ -1,8 +1,8 @@
-[**@alextheman/eslint-plugin v5.10.3**](README.md)
+[**@alextheman/eslint-plugin v5.10.4**](README.md)
 
 ***
 
-# @alextheman/eslint-plugin v5.10.3
+# @alextheman/eslint-plugin v5.10.4
 
 ## Rule Options
 
