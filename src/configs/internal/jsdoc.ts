@@ -9,7 +9,7 @@ const internalJsdoc: Array<Linter.Config> = [
   {
     rules: {
       "jsdoc/check-tag-names": ["error", { definedTags: ["category", "note"] }],
-      "jsdoc/require-jsdoc": ["warn", requireJsdocOptions],
+      "jsdoc/require-jsdoc": ["error", requireJsdocOptions],
       "jsdoc/require-tags": [
         "error",
         {
