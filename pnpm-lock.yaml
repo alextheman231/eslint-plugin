@@ -5,141 +5,141 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  tsdown: <0.21.0
+  tsdown: 0.20.3
 
 importers:
 
   .:
     dependencies:
       '@alextheman/utility':
-        specifier: ^5.8.0
+        specifier: 5.8.0
         version: 5.8.0
       '@eslint/compat':
-        specifier: ^2.0.3
+        specifier: 2.0.3
         version: 2.0.3(eslint@10.1.0)
       '@typescript-eslint/types':
-        specifier: ^8.58.0
+        specifier: 8.58.0
         version: 8.58.0
       '@typescript-eslint/utils':
-        specifier: ^8.58.0
+        specifier: 8.58.0
         version: 8.58.0(eslint@10.1.0)(typescript@6.0.2)
       common-tags:
-        specifier: ^1.8.2
+        specifier: 1.8.2
         version: 1.8.2
       prettier:
-        specifier: ^3.8.1
+        specifier: 3.8.1
         version: 3.8.1
       zod:
-        specifier: ^4.3.6
+        specifier: 4.3.6
         version: 4.3.6
     devDependencies:
       '@eslint/js':
-        specifier: ^10.0.1
+        specifier: 10.0.1
         version: 10.0.1(eslint@10.1.0)
       '@types/common-tags':
-        specifier: ^1.8.4
+        specifier: 1.8.4
         version: 1.8.4
       '@types/eslint':
-        specifier: ^9.6.1
+        specifier: 9.6.1
         version: 9.6.1
       '@types/eslint-plugin-jsx-a11y':
-        specifier: ^6.10.1
+        specifier: 6.10.1
         version: 6.10.1
       '@types/node':
-        specifier: ^25.5.0
+        specifier: 25.5.0
         version: 25.5.0
       '@typescript-eslint/rule-tester':
-        specifier: ^8.58.0
+        specifier: 8.58.0
         version: 8.58.0(eslint@10.1.0)(typescript@6.0.2)
       alex-c-line:
-        specifier: ^2.4.0
+        specifier: 2.4.0
         version: 2.4.0(@types/node@25.5.0)
       dotenv-cli:
-        specifier: ^11.0.0
+        specifier: 11.0.0
         version: 11.0.0
       eslint:
-        specifier: ^10.1.0
+        specifier: 10.1.0
         version: 10.1.0
       eslint-config-prettier:
-        specifier: ^10.1.8
+        specifier: 10.1.8
         version: 10.1.8(eslint@10.1.0)
       eslint-import-resolver-typescript:
-        specifier: ^4.4.4
+        specifier: 4.4.4
         version: 4.4.4(eslint-plugin-import@2.32.0)(eslint@10.1.0)
       eslint-plugin-import:
-        specifier: ^2.32.0
+        specifier: 2.32.0
         version: 2.32.0(@typescript-eslint/parser@8.58.0(eslint@10.1.0)(typescript@6.0.2))(eslint-import-resolver-typescript@4.4.4)(eslint@10.1.0)
       eslint-plugin-jsdoc:
-        specifier: ^62.8.1
+        specifier: 62.8.1
         version: 62.8.1(eslint@10.1.0)
       eslint-plugin-jsx-a11y:
-        specifier: ^6.10.2
+        specifier: 6.10.2
         version: 6.10.2(eslint@10.1.0)
       eslint-plugin-n:
-        specifier: ^17.24.0
+        specifier: 17.24.0
         version: 17.24.0(eslint@10.1.0)(typescript@6.0.2)
       eslint-plugin-package-json:
-        specifier: ^0.91.1
+        specifier: 0.91.1
         version: 0.91.1(@types/estree@1.0.8)(eslint@10.1.0)(jsonc-eslint-parser@2.4.1)
       eslint-plugin-perfectionist:
-        specifier: ^5.7.0
+        specifier: 5.7.0
         version: 5.7.0(eslint@10.1.0)(typescript@6.0.2)
       eslint-plugin-prettier:
-        specifier: ^5.5.5
+        specifier: 5.5.5
         version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.1.0))(eslint@10.1.0)(prettier@3.8.1)
       eslint-plugin-react:
-        specifier: ^7.37.5
+        specifier: 7.37.5
         version: 7.37.5(eslint@10.1.0)
       eslint-plugin-react-hooks:
-        specifier: ^7.0.1
+        specifier: 7.0.1
         version: 7.0.1(eslint@10.1.0)
       eslint-plugin-react-refresh:
-        specifier: ^0.5.2
+        specifier: 0.5.2
         version: 0.5.2(eslint@10.1.0)
       eslint-vitest-rule-tester:
-        specifier: ^3.1.0
+        specifier: 3.1.0
         version: 3.1.0(eslint@10.1.0)(typescript@6.0.2)(vitest@4.1.2(@types/node@25.5.0)(jsdom@29.0.1(canvas@3.2.2))(vite@7.3.1(@types/node@25.5.0)(tsx@4.21.0)(yaml@2.8.3)))
       execa:
-        specifier: ^9.6.1
+        specifier: 9.6.1
         version: 9.6.1
       globals:
-        specifier: ^17.4.0
+        specifier: 17.4.0
         version: 17.4.0
       husky:
-        specifier: ^9.1.7
+        specifier: 9.1.7
         version: 9.1.7
       jsdom:
-        specifier: ^29.0.1
+        specifier: 29.0.1
         version: 29.0.1(canvas@3.2.2)
       tempy:
-        specifier: ^3.2.0
+        specifier: 3.2.0
         version: 3.2.0
       tsdown:
-        specifier: <0.21.0
+        specifier: 0.20.3
         version: 0.20.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(synckit@0.11.12)(typescript@6.0.2)
       tsx:
-        specifier: ^4.21.0
+        specifier: 4.21.0
         version: 4.21.0
       typedoc:
-        specifier: ^0.28.18
+        specifier: 0.28.18
         version: 0.28.18(typescript@6.0.2)
       typedoc-plugin-markdown:
-        specifier: ^4.11.0
+        specifier: 4.11.0
         version: 4.11.0(typedoc@0.28.18(typescript@6.0.2))
       typedoc-rhineai-theme:
-        specifier: ^1.2.0
+        specifier: 1.2.0
         version: 1.2.0(typedoc@0.28.18(typescript@6.0.2))
       typescript:
-        specifier: ^6.0.2
+        specifier: 6.0.2
         version: 6.0.2
       typescript-eslint:
-        specifier: ^8.58.0
+        specifier: 8.58.0
         version: 8.58.0(eslint@10.1.0)(typescript@6.0.2)
       vite-tsconfig-paths:
-        specifier: ^6.1.1
+        specifier: 6.1.1
         version: 6.1.1(typescript@6.0.2)(vite@7.3.1(@types/node@25.5.0)(tsx@4.21.0)(yaml@2.8.3))
       vitest:
-        specifier: ^4.1.2
+        specifier: 4.1.2
         version: 4.1.2(@types/node@25.5.0)(jsdom@29.0.1(canvas@3.2.2))(vite@7.3.1(@types/node@25.5.0)(tsx@4.21.0)(yaml@2.8.3))
 
 packages:

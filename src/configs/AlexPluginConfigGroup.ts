@@ -20,7 +20,8 @@ export type InternalConfig =
   | "utilityInternal"
   | "alexCLine"
   | "jsdoc"
-  | "components";
+  | "components"
+  | "packageJson";
 export type CombinedConfig =
   | "javascript"
   | "typescript"

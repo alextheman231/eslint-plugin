@@ -36,6 +36,7 @@ import {
   internalUtilityRoot,
 } from "src/configs/internal";
 import internalEslintPluginUtility from "src/configs/internal/eslintPlugin/utility";
+import internalPackageJson from "src/configs/internal/packageJson";
 import { pluginBase, pluginTests } from "src/configs/plugin";
 import flattenConfigs from "src/utility/public/flattenConfigs";
 
@@ -69,6 +70,7 @@ function createAlexPluginConfigs(
       jsdoc: internalJsdoc,
       neurosongsBackEnd: internalNeurosongsBackEnd,
       neurosongsFrontEnd: internalNeurosongsFrontEnd,
+      packageJson: internalPackageJson,
       react: internalReact,
       tests: internalTests,
       typescript: internalTypeScript(plugin),
