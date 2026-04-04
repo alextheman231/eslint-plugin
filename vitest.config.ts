@@ -1,3 +1,14 @@
-import { vitestConfig } from "./dist/index.js";
+import type { UserProjectConfigExport } from "vitest/config";
 
-export default vitestConfig("node");
+const config: UserProjectConfigExport = {
+  resolve: {
+    tsconfigPaths: true,
+  },
+  test: {
+    environment: "node",
+    globals: true,
+    include: ["**/tests/**/*.test.ts"],
+  },
+};
+
+export default config;
