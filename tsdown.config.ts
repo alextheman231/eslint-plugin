@@ -1,18 +1,20 @@
-import { defineConfig } from "tsdown";
+import type { UserConfig } from "tsdown";
 import packageInfo from "./package.json" with { type: "json" };
 
-export default defineConfig([
+const config: Array<UserConfig> = [
   {
     entry: ["src/index.ts"],
     format: ["esm", "cjs"],
     dts: true,
     clean: true,
-    external: [...Object.keys(packageInfo.peerDependencies), "@typescript-eslint/utils"],
+    deps: {
+      neverBundle: [...Object.keys(packageInfo.peerDependencies), "@typescript-eslint/utils"],
+      onlyBundle: false,
+    },
     fixedExtension: false,
     outputOptions: {
       exports: "named",
     },
-    inlineOnly: false,
   },
   {
     entry: ["src/utility/public/index.ts"],
@@ -20,12 +22,14 @@ export default defineConfig([
     format: ["esm", "cjs"],
     dts: true,
     clean: true,
-    external: [...Object.keys(packageInfo.peerDependencies), "@typescript-eslint/utils"],
+    deps: {
+      neverBundle: [...Object.keys(packageInfo.peerDependencies), "@typescript-eslint/utils"],
+      onlyBundle: false,
+    },
     fixedExtension: false,
     outputOptions: {
       exports: "named",
     },
-    inlineOnly: false,
   },
   {
     entry: ["src/internal/index.ts"],
@@ -33,11 +37,15 @@ export default defineConfig([
     format: ["esm", "cjs"],
     dts: true,
     clean: true,
-    external: [...Object.keys(packageInfo.peerDependencies), "@typescript-eslint/utils"],
+    deps: {
+      neverBundle: [...Object.keys(packageInfo.peerDependencies), "@typescript-eslint/utils"],
+      onlyBundle: false,
+    },
     fixedExtension: false,
     outputOptions: {
       exports: "named",
     },
-    inlineOnly: false,
   },
-]);
+];
+
+export default config;
