@@ -1,4 +1,5 @@
 # Contributing
+
 ## Creating a new rule
 
 To add a new rule, you must first create the skeleton structure of your rule, following the given template:
@@ -58,7 +59,6 @@ export default {
   "my-rule": myRule
 };
 ```
-
 
 Next, create the test suite for the rule. You should use the `createRuleTester` function from `tests/rule-testers/createRuleTester` in the following way:
 
