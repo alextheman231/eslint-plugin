@@ -17,10 +17,10 @@ npm install --save-peer @alextheman/eslint-plugin
 ```
 
 ## Configs
+
 ### The Config Groups
 
 The configs of this plugin are structured in a very particular way. We have our general configs in `src/configs/general`, our plugin configs in `src/configs/plugin`, our personal internal configs in `src/configs/personal`, and our combined configs in `src/configs/combined`. In all three cases, we use the [ESLint flat config style](https://eslint.org/blog/2022/08/new-config-system-part-2/) as that's the most up-to-date config style and allows for more flexibility than just using a package.json or .eslintrc.
-
 
 The general configs are to be used for defining a ruleset that does NOT rely on the custom plugin rules. They must ONLY use external rules.
 
