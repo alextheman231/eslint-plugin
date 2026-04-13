@@ -2,7 +2,6 @@ import type { Linter } from "eslint";
 
 import type { AlexPlugin } from "src/alexPlugin";
 
-import importPlugin from "eslint-plugin-import";
 import nodePlugin from "eslint-plugin-n";
 import perfectionist from "eslint-plugin-perfectionist";
 import prettierPlugin from "eslint-plugin-prettier";
@@ -21,7 +20,6 @@ function internalJavaScript(plugin: Readonly<AlexPlugin>): Array<Linter.Config> 
       name: "@alextheman/internal/javascript",
       plugins: {
         "@alextheman": plugin,
-        import: importPlugin,
         n: nodePlugin,
         perfectionist,
         prettier: prettierPlugin,
@@ -31,7 +29,6 @@ function internalJavaScript(plugin: Readonly<AlexPlugin>): Array<Linter.Config> 
         "arrow-body-style": ["error", "always"],
         curly: ["error", "all"],
         "func-style": ["error", "declaration", { allowArrowFunctions: false }],
-        "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
         "n/no-extraneous-import": "off",
         "no-else-return": "error",
         "no-implicit-coercion": ["error", { allow: ["!!"] }],

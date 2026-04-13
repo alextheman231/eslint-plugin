@@ -2,7 +2,9 @@ import type { Linter } from "eslint";
 
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
-import importPlugin from "eslint-plugin-import";
+// eslint-disable-next-line @alextheman/no-namespace-imports
+import * as tsResolver from "eslint-import-resolver-typescript";
+import importPlugin from "eslint-plugin-import-x";
 import nodePlugin from "eslint-plugin-n";
 
 import javaScriptLanguageOptions from "src/configs/helpers/javaScriptLanguageOptions";
@@ -19,13 +21,13 @@ const generalJavaScript: Array<Linter.Config> = [
     languageOptions: javaScriptLanguageOptions,
     name: "@alextheman/general/javascript",
     plugins: {
-      import: importPlugin,
+      "import-x": importPlugin,
       n: nodePlugin,
     },
     rules: {
       eqeqeq: "error",
-      "import/no-duplicates": ["error", { "prefer-inline": false }],
-      "import/no-unresolved": "error",
+      "import-x/no-duplicates": ["error", { "prefer-inline": false }],
+      "import-x/no-unresolved": "error",
       "n/file-extension-in-import": [
         "error",
         "always",
@@ -56,8 +58,12 @@ const generalJavaScript: Array<Linter.Config> = [
       "prefer-const": "error",
     },
     settings: {
-      "import/resolver": {
-        node: true,
+      "import-x/resolver": {
+        name: "tsResolver",
+        options: {
+          node: true,
+        },
+        resolver: tsResolver,
       },
     },
   },
