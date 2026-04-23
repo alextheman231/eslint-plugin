@@ -1,4 +1,4 @@
-import { DataError } from "@alextheman/utility";
+import { DataError } from "@alextheman/utility/v6";
 
 function requirePackage<PackageType>(
   requiredPackage: string,

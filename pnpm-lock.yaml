@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@alextheman/utility':
-        specifier: 5.11.2
-        version: 5.11.2
+        specifier: 5.13.1
+        version: 5.13.1
       '@eslint/compat':
         specifier: 2.0.5
         version: 2.0.5(eslint@10.2.1)
@@ -142,8 +142,8 @@ packages:
     resolution: {integrity: sha512-uZkQezcxvO6NJ2VHpIyQ0gF6Ha+NaYq6ylJtyaYuKPDSYjW1GgQf+BQseP/PLGWpT5SzYg795ewqvwfJrrGoWA==}
     engines: {node: '>=22.3.0'}
 
-  '@alextheman/utility@5.11.2':
-    resolution: {integrity: sha512-4B93rFyDqGxaf87yUqK5hBtTcUcfgiNEcIFqAUrhZWQAMQNvWwuHIBcwvWriFyLk3DyG/KDfJi4EMe73nmeyzQ==}
+  '@alextheman/utility@5.13.1':
+    resolution: {integrity: sha512-i1odK7yi/j5HFS99Qdi/NEFBh7qX5XvAqVI4j1zz1SFK7TdOsG02bc/lkVLEj2vajJ+dKQmsXG51TA2Z1znbLg==}
     engines: {node: '>=22.3.0'}
 
   '@altano/repository-tools@2.0.3':
@@ -3481,9 +3481,9 @@ snapshots:
       execa: 9.6.1
       zod: 4.3.6
 
-  '@alextheman/utility@5.11.2':
+  '@alextheman/utility@5.13.1':
     dependencies:
-      dotenv: 17.4.1
+      dotenv: 17.4.2
       execa: 9.6.1
       zod: 4.3.6
 

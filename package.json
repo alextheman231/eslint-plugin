@@ -64,7 +64,7 @@
     "use-local-package": "bash -c 'alex-c-line use-local-package $@' --"
   },
   "dependencies": {
-    "@alextheman/utility": "5.11.2",
+    "@alextheman/utility": "5.13.1",
     "@eslint/compat": "2.0.5",
     "@typescript-eslint/types": "8.58.2",
     "@typescript-eslint/utils": "8.58.2",

@@ -1,4 +1,5 @@
-import { camelToKebab as alexCamelToKebab, DataError } from "@alextheman/utility";
+import { camelToKebab as alexCamelToKebab } from "@alextheman/utility";
+import { DataError } from "@alextheman/utility/v6";
 
 export type CamelToKebab<S extends string> = S extends `${infer Head}${infer Tail}`
   ? Head extends Lowercase<Head>
