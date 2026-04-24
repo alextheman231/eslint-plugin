@@ -1,4 +1,4 @@
-import { normaliseIndents, parseZodSchema } from "@alextheman/utility";
+import { az, normaliseIndents } from "@alextheman/utility";
 import z from "zod";
 
 import createRule from "src/rules/helpers/createRule";
@@ -11,7 +11,7 @@ const hasStandardsOptionsSchema = z
   .partial();
 export type HasStandardsOptions = z.infer<typeof hasStandardsOptionsSchema>;
 export function parseHasStandardsOptions(input: unknown): HasStandardsOptions {
-  return parseZodSchema(hasStandardsOptionsSchema, input);
+  return az.with(hasStandardsOptionsSchema).parse(input);
 }
 const defaultOptions: HasStandardsOptions = { fixable: false };
 
