@@ -33,7 +33,7 @@
   "files": [
     "dist"
   ],
-    "engines": {
+  "engines": {
     "node": ">=22.3.0"
   },
   "scripts": {
