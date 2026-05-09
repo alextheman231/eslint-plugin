@@ -12,7 +12,7 @@ import { execa } from "execa";
 import { temporaryDirectoryTask } from "tempy";
 import { beforeAll, describe as describeVitest, expect, test } from "vitest";
 
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import tsConfig from "tsconfig.json" with { type: "json" };
@@ -54,6 +54,11 @@ describe("Entrypoint for @alextheman/eslint-plugin", () => {
       "Module type %s",
       async (moduleType) => {
         await temporaryDirectoryTask(async (temporaryPath) => {
+          await cp(
+            path.join(process.cwd(), "pnpm-workspace.yaml"),
+            path.join(temporaryPath, "pnpm-workspace.yaml"),
+          );
+
           console.info("Setting up local package in temporary directory...");
           const runCommandInTempDirectory = await setupPackageEndToEnd(
             temporaryPath,

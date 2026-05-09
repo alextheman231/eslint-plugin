@@ -33,6 +33,9 @@
   "files": [
     "dist"
   ],
+    "engines": {
+    "node": ">=22.3.0"
+  },
   "scripts": {
     "build": "tsdown",
     "create-local-package": "pnpm run build && rm -f alextheman-eslint-plugin-*.tgz && pnpm pack",
