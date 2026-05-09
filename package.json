@@ -44,7 +44,7 @@
     "format-prettier": "pnpm run format-prettier-typescript && pnpm run format-prettier-javascript && pnpm run format-prettier-yml",
     "format-prettier-javascript": "prettier --write \"./**/*.js\"",
     "format-prettier-typescript": "prettier --write --parser typescript \"./**/*.ts\"",
-    "format-prettier-yml": "prettier --write \"./**/*.yml\"",
+    "format-prettier-yml": "prettier --write \"./**/*.{yml,yaml}\"",
     "lint": "pnpm run lint-tsc && pnpm run lint-eslint && pnpm run lint-markdownlint && pnpm run lint-prettier && pnpm run lint-pre-release",
     "lint-and-build": "tsx src/utility/checkConfigChanges.ts || pnpm run build && pnpm run lint",
     "lint-eslint": "eslint \"{src,tests}/**/*.ts\" \"package.json\"",
@@ -127,11 +127,5 @@
     "eslint-plugin-react-refresh": ">=0.4.0",
     "typescript-eslint": ">=8.0.0"
   },
-  "packageManager": "pnpm@10.33.2+sha512.a90faf6feeab71ad6c6e57f94e0fe1a12f5dcc22cd754db40ae9593eb6a3e0b6b12e3540218bb37ae083404b1f2ce6db2a4121e979829b4aff94b99f49da1cf8",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "unrs-resolver"
-    ]
-  }
+  "packageManager": "pnpm@11.0.9+sha512.34ce82e6780233cf9cad8685029a8f81d2e06196c5a9bad98879f7424940c6817c4e4524fb7d38b8553ceed48b9758b8ebaf1abd3600c232c4c8cf7366086f38"
 }
