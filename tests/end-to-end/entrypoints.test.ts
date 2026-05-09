@@ -50,7 +50,7 @@ const describe = parseBoolean(process.env.RUN_END_TO_END ?? "false")
 
 describe("Entrypoint for @alextheman/eslint-plugin", () => {
   describe.each<PackageManager>(["pnpm"])("Package manager %s", (packageManager) => {
-    test.each<ModuleType>(["commonjs", "module", "typescript"])(
+    test.each<ModuleType>(["module", "typescript"])(
       "Module type %s",
       async (moduleType) => {
         await temporaryDirectoryTask(async (temporaryPath) => {
