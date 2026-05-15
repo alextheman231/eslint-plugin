@@ -68,9 +68,9 @@
   },
   "dependencies": {
     "@alextheman/utility": "5.18.2",
-    "@eslint/compat": "2.0.5",
-    "@typescript-eslint/types": "8.59.2",
-    "@typescript-eslint/utils": "8.59.2",
+    "@eslint/compat": "2.1.0",
+    "@typescript-eslint/types": "8.59.3",
+    "@typescript-eslint/utils": "8.59.3",
     "common-tags": "1.8.2",
     "prettier": "3.8.3",
     "zod": "4.4.3"
@@ -80,8 +80,8 @@
     "@types/common-tags": "1.8.4",
     "@types/eslint": "9.6.1",
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
-    "@types/node": "25.6.2",
-    "@typescript-eslint/rule-tester": "8.59.2",
+    "@types/node": "25.8.0",
+    "@typescript-eslint/rule-tester": "8.59.3",
     "alex-c-line": "2.7.2",
     "dotenv-cli": "11.0.0",
     "eslint": "10.3.0",
@@ -106,11 +106,11 @@
     "markdownlint-cli2": "0.22.1",
     "tempy": "3.2.0",
     "tsdown": "0.22.0",
-    "tsx": "4.21.0",
+    "tsx": "4.22.0",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.59.2",
-    "vite": "8.0.11",
-    "vitest": "4.1.5"
+    "typescript-eslint": "8.59.3",
+    "vite": "8.0.13",
+    "vitest": "4.1.6"
   },
   "peerDependencies": {
     "@eslint/js": ">=9.0.0",
