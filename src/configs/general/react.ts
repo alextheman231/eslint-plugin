@@ -1,6 +1,6 @@
 import type { Linter } from "eslint";
 
-import jsxA11y from "eslint-plugin-jsx-a11y";
+import jsxA11y from "eslint-plugin-jsx-a11y-x";
 import reactPlugin from "eslint-plugin-react";
 import reactRefresh from "eslint-plugin-react-refresh";
 
@@ -10,7 +10,7 @@ import reactLanguageOptions from "src/configs/helpers/reactLanguageOptions";
 const generalReact: Array<Linter.Config> = [
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat["jsx-runtime"],
-  jsxA11y.flatConfigs.recommended,
+  jsxA11y.configs.recommended,
   {
     languageOptions: reactLanguageOptions,
     name: "@alextheman/general/react",
