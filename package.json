@@ -82,7 +82,7 @@
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/node": "25.9.1",
     "@typescript-eslint/rule-tester": "8.59.4",
-    "alex-c-line": "2.7.2",
+    "alex-c-line": "2.8.1",
     "dotenv-cli": "11.0.0",
     "eslint": "10.4.0",
     "eslint-config-prettier": "10.1.8",
