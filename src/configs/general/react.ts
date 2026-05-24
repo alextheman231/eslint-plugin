@@ -1,35 +1,38 @@
 import type { Linter } from "eslint";
 
+import reactPlugin from "@eslint-react/eslint-plugin";
+import stylistic from "@stylistic/eslint-plugin";
 import jsxA11y from "eslint-plugin-jsx-a11y-x";
-import reactPlugin from "eslint-plugin-react";
 import reactRefresh from "eslint-plugin-react-refresh";
 
 import reactHooks from "src/configs/helpers/eslint-plugin-react-hooks";
 import reactLanguageOptions from "src/configs/helpers/reactLanguageOptions";
 
 const generalReact: Array<Linter.Config> = [
-  reactPlugin.configs.flat.recommended,
-  reactPlugin.configs.flat["jsx-runtime"],
   jsxA11y.configs.recommended,
   {
     languageOptions: reactLanguageOptions,
     name: "@alextheman/general/react",
     plugins: {
-      react: reactPlugin,
+      "@eslint-react": reactPlugin,
+      "@stylistic": stylistic,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
     },
     rules: {
       ...reactHooks.configs["flat/recommended"].rules,
-      "react/destructuring-assignment": ["error", "always", { destructureInSignature: "always" }],
-      "react/hook-use-state": "error",
-      "react/jsx-curly-brace-presence": [
+      ...reactPlugin.configs["recommended-typescript"].rules,
+      // "react/jsx-props-no-spread-multi": "error", // TODO: Use @eslint-react/kit for this
+      "@eslint-react/dom-no-dangerously-set-innerhtml": "error",
+      "@eslint-react/no-array-index-key": "off",
+      "@eslint-react/no-context-provider": "error",
+      "@eslint-react/no-use-context": "error",
+      // "react/destructuring-assignment": ["error", "always", { destructureInSignature: "always" }], // TODO: Use @eslint-react/kit for this
+      "@eslint-react/use-state": "error",
+      "@stylistic/jsx-curly-brace-presence": [
         "error",
         { children: "never", propElementValues: "always", props: "never" },
       ],
-      "react/jsx-props-no-spread-multi": "error",
-      "react/no-danger": "error",
-      "react/no-unescaped-entities": "off",
     },
     settings: {
       react: {
