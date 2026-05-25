@@ -27,12 +27,14 @@ const generalReact: Array<Linter.Config> = [
       "@eslint-react/no-array-index-key": "off",
       "@eslint-react/no-context-provider": "error",
       "@eslint-react/no-use-context": "error",
+      "@eslint-react/set-state-in-effect": "error",
       // "react/destructuring-assignment": ["error", "always", { destructureInSignature: "always" }], // TODO: Use @eslint-react/kit for this
       "@eslint-react/use-state": "error",
       "@stylistic/jsx-curly-brace-presence": [
         "error",
         { children: "never", propElementValues: "always", props: "never" },
       ],
+      "react-hooks/set-state-in-effect": "off",
     },
     settings: {
       react: {
