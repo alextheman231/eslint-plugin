@@ -45,7 +45,7 @@ const generalJavaScript: Array<Linter.Config> = [
       "n/no-unpublished-import": "off",
       "n/prefer-node-protocol": "error",
       "no-cond-assign": "error",
-      "no-console": ["error", { allow: ["warn", "error", "info"] }],
+      "no-console": ["error", { allow: ["warn", "error", "info", "table"] }],
       "no-eval": "error",
       "no-lonely-if": "error",
       "no-new-wrappers": "error",
