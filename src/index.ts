@@ -1,4 +1,4 @@
-/* eslint-disable no-restricted-imports */
+// eslint-disable-next-line no-restricted-imports -- We need to import the plugin in the entrypoint because it's the entrypoint.
 import alexPlugin from "src/alexPlugin";
 
 export * from "src/configs/external";

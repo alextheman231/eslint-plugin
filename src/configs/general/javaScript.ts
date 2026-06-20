@@ -1,8 +1,9 @@
 import type { Linter } from "eslint";
 
+import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
-// eslint-disable-next-line @alextheman/no-namespace-imports
+// eslint-disable-next-line @alextheman/no-namespace-imports -- We are expected to pass the whole module to the resolver in the settings.
 import * as tsResolver from "eslint-import-resolver-typescript";
 import importPlugin from "eslint-plugin-import-x";
 import nodePlugin from "eslint-plugin-n";
@@ -14,6 +15,7 @@ import unusedVarsIgnorePatterns from "src/configs/helpers/unusedVarsIgnorePatter
 const generalJavaScript: Array<Linter.Config> = [
   js.configs.recommended,
   prettierConfig,
+  comments.recommended,
   nodePlugin.configs["flat/recommended"],
   {
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
@@ -25,6 +27,7 @@ const generalJavaScript: Array<Linter.Config> = [
       n: nodePlugin,
     },
     rules: {
+      "@eslint-community/eslint-comments/require-description": "error",
       eqeqeq: "error",
       "import-x/no-duplicates": ["error", { "prefer-inline": false }],
       "import-x/no-unresolved": "error",

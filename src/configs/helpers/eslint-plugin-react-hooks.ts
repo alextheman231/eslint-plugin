@@ -1,5 +1,5 @@
 import { omitProperties } from "@alextheman/utility";
-// eslint-disable-next-line no-restricted-imports
+// eslint-disable-next-line no-restricted-imports -- We need to import the hooks plugin here so that the rest of the code doesn't have to.
 import reactHooksPlugin from "eslint-plugin-react-hooks";
 
 const reactHooks: Record<PropertyKey, any> = {

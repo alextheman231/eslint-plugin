@@ -2,7 +2,7 @@ import type { Linter } from "eslint";
 
 import type { AlexPlugin } from "src/alexPlugin";
 
-// eslint-disable-next-line @alextheman/no-namespace-imports
+// eslint-disable-next-line @alextheman/no-namespace-imports -- We are expected to pass the whole module to the resolver in the settings.
 import * as tsResolver from "eslint-import-resolver-typescript";
 import importPlugin from "eslint-plugin-import-x";
 import tseslint from "typescript-eslint";
