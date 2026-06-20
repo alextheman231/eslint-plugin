@@ -1,6 +1,6 @@
 import type { RuleTester, RuleTesterInitOptions } from "eslint-vitest-rule-tester";
 
-// eslint-disable-next-line no-restricted-imports
+// eslint-disable-next-line no-restricted-imports -- We need to import the regular rule tester here so that the rest of the code can use our custom one.
 import { createRuleTester as createVitestRuleTester } from "eslint-vitest-rule-tester";
 
 function createRuleTester<RuleOptions = any, MessageId extends string = string>(
