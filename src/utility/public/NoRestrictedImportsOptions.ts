@@ -15,9 +15,7 @@ interface RestrictedPathImportAllowImportNames extends RestrictedPathImportBase 
 }
 
 export type RestrictedPathImport =
-  | RestrictedPathImportBase
-  | RestrictedPathImportImportNames
-  | RestrictedPathImportAllowImportNames;
+  RestrictedPathImportBase | RestrictedPathImportImportNames | RestrictedPathImportAllowImportNames;
 
 interface RestrictedPatternImportBase {
   caseSensitive?: boolean;
