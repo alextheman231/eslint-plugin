@@ -39,6 +39,7 @@
   "scripts": {
     "build": "tsdown",
     "create-local-package": "pnpm run build && rm -f alextheman-eslint-plugin-*.tgz && pnpm pack",
+    "create-release": "bash -c 'git pull origin main && alex-c-line template release-note create $@ --status \"Released\" --update-version' --",
     "create-release-note": "bash -c 'git pull origin main && alex-c-line template release-note create $@' --",
     "format": "pnpm run format-prettier && pnpm run format-eslint && pnpm run format-markdownlint",
     "format-and-build": "tsx src/utility/checkConfigChanges.ts || pnpm run build && pnpm run format",
@@ -85,7 +86,7 @@
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/node": "26.1.1",
     "@typescript-eslint/rule-tester": "8.64.0",
-    "alex-c-line": "2.12.4",
+    "alex-c-line": "2.13.0",
     "dotenv-cli": "11.0.0",
     "eslint": "10.7.0",
     "eslint-config-prettier": "10.1.8",
