@@ -10,7 +10,7 @@ jobs:
       contents: write
       pull-requests: write
     if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
-    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@760f1347c1597e458ce3e966112d7278ed15c059 # v12.5.1
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@bba094b0c09dda59228db6437a5231ba0538d09a # v12.7.0
     with:
       version-type: major
     secrets:
@@ -22,7 +22,7 @@ jobs:
       contents: write
       pull-requests: write
     if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
-    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@760f1347c1597e458ce3e966112d7278ed15c059 # v12.5.1
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@bba094b0c09dda59228db6437a5231ba0538d09a # v12.7.0
     with:
       version-type: minor
     secrets:
@@ -34,7 +34,7 @@ jobs:
       contents: write
       pull-requests: write
     if: ${{ github.repository == 'alextheman231/eslint-plugin' }}
-    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@760f1347c1597e458ce3e966112d7278ed15c059 # v12.5.1
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@bba094b0c09dda59228db6437a5231ba0538d09a # v12.7.0
     with:
       version-type: patch
     secrets:
