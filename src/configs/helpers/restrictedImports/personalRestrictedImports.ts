@@ -7,6 +7,7 @@ const personalRestrictedImports = combineRestrictedImports(generalRestrictedImpo
   paths: [
     ...["fs", "node:fs"].map((name) => {
       const restrictedImport: RestrictedPathImport = {
+        allowTypeImports: true,
         message: "Please use node:fs/promises instead.",
         name,
       };
