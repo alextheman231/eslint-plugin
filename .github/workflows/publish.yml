@@ -9,12 +9,12 @@ jobs:
   check-npm-version:
     permissions:
       contents: read
-    uses: alextheman231/github-actions/.github/workflows/report-npm-version-existence.yml@f1ff1cf13a2143e1e04a55da4b1fd77c2adb9b78 # v14.0.0
+    uses: alextheman231/github-actions/.github/workflows/report-npm-version-existence.yml@a8e567aa7146169f3d858752ffb0f2dfd9ecb70f # v14.0.1
 
   check-version-tag:
     permissions:
       contents: read
-    uses: alextheman231/github-actions/.github/workflows/report-version-tag-existence.yml@f1ff1cf13a2143e1e04a55da4b1fd77c2adb9b78 # v14.0.0
+    uses: alextheman231/github-actions/.github/workflows/report-version-tag-existence.yml@a8e567aa7146169f3d858752ffb0f2dfd9ecb70f # v14.0.1
     with:
       CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
     secrets:
@@ -23,7 +23,7 @@ jobs:
   check-release-note:
     permissions:
       contents: read
-    uses: alextheman231/github-actions/.github/workflows/report-release-note-existence.yml@f1ff1cf13a2143e1e04a55da4b1fd77c2adb9b78 # v14.0.0
+    uses: alextheman231/github-actions/.github/workflows/report-release-note-existence.yml@a8e567aa7146169f3d858752ffb0f2dfd9ecb70f # v14.0.1
     with:
       CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
     secrets:
@@ -34,14 +34,14 @@ jobs:
     if: ${{ needs.check-npm-version.outputs.version-exists == 'false' && needs.check-version-tag.outputs.tag-exists == 'false' && needs.check-release-note.outputs.release-note-found == 'true' }}
     permissions:
       id-token: write
-    uses: alextheman231/github-actions/.github/workflows/npm-registry-publish.yml@f1ff1cf13a2143e1e04a55da4b1fd77c2adb9b78 # v14.0.0
+    uses: alextheman231/github-actions/.github/workflows/npm-registry-publish.yml@a8e567aa7146169f3d858752ffb0f2dfd9ecb70f # v14.0.1
 
   create-github-release:
     needs: [check-version-tag, check-release-note]
     permissions:
       contents: write
     if: ${{ needs.check-version-tag.outputs.tag-exists == 'false' && needs.check-release-note.outputs.release-note-found == 'true' }}
-    uses: alextheman231/github-actions/.github/workflows/create-github-release.yml@f1ff1cf13a2143e1e04a55da4b1fd77c2adb9b78 # v14.0.0
+    uses: alextheman231/github-actions/.github/workflows/create-github-release.yml@a8e567aa7146169f3d858752ffb0f2dfd9ecb70f # v14.0.1
     with:
       CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
       tag: ${{ needs.check-version-tag.outputs.tag }}
