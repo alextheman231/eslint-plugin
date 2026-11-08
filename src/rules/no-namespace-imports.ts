@@ -26,8 +26,8 @@ const noNamespaceImports = createRule({
     },
     type: "suggestion",
     schema,
+    defaultOptions: [{ allow: [""] }],
   },
-  defaultOptions: [{ allow: [""] }],
   create(context) {
     const { allow } = parseNoNamespaceImportsOptions(context.options[0] ?? { allow: [] });
     return {

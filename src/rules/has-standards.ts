@@ -31,8 +31,8 @@ const hasStandards = createRule({
     type: "suggestion",
     schema: createRuleSchemaFromZodSchema(hasStandardsOptionsSchema),
     fixable: "code",
+    defaultOptions: [defaultOptions],
   },
-  defaultOptions: [defaultOptions],
   create(context) {
     const { fixable = false } = parseHasStandardsOptions(context.options[0] ?? defaultOptions);
     return {

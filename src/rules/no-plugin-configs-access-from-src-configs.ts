@@ -12,8 +12,8 @@ const noPluginConfigAccessFromSrcConfigs = createRule({
     },
     type: "problem",
     schema: [],
+    defaultOptions: [],
   },
-  defaultOptions: [],
   create(context) {
     return {
       MemberExpression(node) {

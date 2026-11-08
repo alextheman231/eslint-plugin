@@ -40,8 +40,8 @@ const consistentTestFunction = createRule({
     type: "suggestion",
     fixable: "code",
     schema: createRuleSchemaFromZodSchema(consistentTestFunctionOptionsSchema),
+    defaultOptions: [defaultOptions],
   },
-  defaultOptions: [defaultOptions],
   create(context) {
     const { preference = "test", fixable = true } = parseConsistentTestFunctionOptions(
       context.options[0] ?? {},
