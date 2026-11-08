@@ -17,7 +17,7 @@ import type { RuleContext } from "@typescript-eslint/utils/ts-eslint";
  * @returns A comma-separated string of import specifiers after removing the specified import.
  */
 function getImportSpecifiersAfterRemoving<RuleOptions>(
-  context: Readonly<RuleContext<"message", [RuleOptions]>>,
+  context: Readonly<RuleContext<"message", Array<RuleOptions>>>,
   specifiers: Array<TSESTree.ImportClause>,
   importToRemove: string,
 ): string {

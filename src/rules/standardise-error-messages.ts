@@ -26,11 +26,9 @@ function checkCurrentNode(
   context: Readonly<
     RuleContext<
       "message",
-      [
-        {
-          regex: string;
-        },
-      ]
+      Array<{
+        regex: string;
+      }>
     >
   >,
   node: TSESTree.CallExpression | TSESTree.NewExpression,
@@ -65,8 +63,8 @@ const standardiseErrorMessages = createRule({
     },
     type: "suggestion",
     schema,
+    defaultOptions: [{ regex: defaultErrorRegex }],
   },
-  defaultOptions: [{ regex: defaultErrorRegex }],
   create(context) {
     return {
       CallExpression(node) {

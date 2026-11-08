@@ -31,8 +31,8 @@ const useNormalizedImports = createRule({
     type: "suggestion",
     schema,
     fixable: "code",
+    defaultOptions: [{ fixable: true }],
   },
-  defaultOptions: [{ fixable: true }],
   create(context) {
     const { fixable = true } = parseUseNormalizedImportsOptions(
       context.options[0] ?? { fixable: true },

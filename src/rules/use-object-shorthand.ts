@@ -30,8 +30,8 @@ const useObjectShorthand = createRule({
     type: "suggestion",
     fixable: "code",
     schema: createRuleSchemaFromZodSchema(useObjectShorthandOptionsSchema),
+    defaultOptions: [{ fixable: true }],
   },
-  defaultOptions: [{ fixable: true }],
   create(context) {
     const { fixable = true } = parseUseObjectShorthandOptions(
       context.options[0] ?? { fixable: true },

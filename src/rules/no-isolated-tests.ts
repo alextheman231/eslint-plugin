@@ -14,8 +14,8 @@ const noIsolatedTests = createRule({
     },
     type: "suggestion",
     schema: [],
+    defaultOptions: [],
   },
-  defaultOptions: [],
   create(context) {
     return {
       CallExpression(node) {
