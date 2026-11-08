@@ -97,10 +97,10 @@ describe("no-relative-imports", () => {
         ],
       });
     });
-    test.each([
-      ["../../utils/myFunction", 1],
-      ["../../../utils/myFunction", 2],
-    ])("Does not allow relative imports deeper than depth=%i", (source, depth) => {
+    test.each<[number, string]>([
+      [1, "../../utils/myFunction"],
+      [2, "../../../utils/myFunction"],
+    ])("Does not allow relative imports deeper than depth=%i", (depth, source) => {
       invalid({
         code: `import myFunction from "${source}";`,
         options: [{ depth }],
