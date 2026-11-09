@@ -6,3 +6,5 @@ alextheman-eslint-plugin-*.tgz
 .config-hash
 .alex-c-line.private.config.js
 .alex-c-line
+
+.pdm-python
