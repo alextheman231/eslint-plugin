@@ -6,7 +6,6 @@ import nodePlugin from "eslint-plugin-n";
 import perfectionist from "eslint-plugin-perfectionist";
 import prettierPlugin from "eslint-plugin-prettier";
 
-import prettierConfig from "src/configs/external/prettierConfig";
 import { sortClasses, sortExports, sortImports } from "src/configs/helpers";
 import javaScriptLanguageOptions from "src/configs/helpers/javaScriptLanguageOptions";
 import personalRestrictedImports from "src/configs/helpers/restrictedImports/personalRestrictedImports";
@@ -41,7 +40,6 @@ function internalJavaScript(plugin: Readonly<AlexPlugin>): Array<Linter.Config> 
         "prefer-arrow-callback": ["error", { allowNamedFunctions: false }],
         "prefer-destructuring": "error",
         "prefer-template": "error",
-        "prettier/prettier": ["warn", prettierConfig],
         "sort-vars": "error",
       },
     },
