@@ -79,7 +79,7 @@
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/node": "26.6.6",
     "@typescript-eslint/rule-tester": "8.72.1",
-    "alex-c-line": "2.17.3",
+    "alex-c-line": "2.18.2",
     "dotenv-cli": "11.1.0",
     "eslint": "10.14.0",
     "eslint-config-prettier": "10.1.8",
@@ -129,4 +129,3 @@
   },
   "packageManager": "pnpm@12.18.0+sha512.9d7882d5dc82147ecfc4e062aa34834e0ad0296710a1837a1115ae012127d36b7109e321ac1598a1dd0a65597681b1e99917e12ed0d749eae91187943363beb3"
 }
-
